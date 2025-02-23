@@ -48,6 +48,7 @@ public class Interfaz1 extends javax.swing.JFrame {
 
         jPanel1.setBackground(new java.awt.Color(153, 255, 255));
 
+        jLabel3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/invenmtario1.jpg"))); // NOI18N
         jLabel3.setText("Img 1");
 
         jButton1.setFont(new java.awt.Font("Arial Black", 0, 14)); // NOI18N
