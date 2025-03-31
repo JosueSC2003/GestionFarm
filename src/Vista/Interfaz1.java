@@ -32,24 +32,45 @@ public class Interfaz1 extends javax.swing.JFrame {
         jButton2 = new javax.swing.JButton();
         jLabel4 = new javax.swing.JLabel();
         jLabel5 = new javax.swing.JLabel();
+<<<<<<< HEAD
         jButton3 = new javax.swing.JButton();
+=======
+        btninformes = new javax.swing.JButton();
+>>>>>>> fcee56b (Actualizado)
         jLabel6 = new javax.swing.JLabel();
         jButton4 = new javax.swing.JButton();
         jButton5 = new javax.swing.JButton();
         jLabel7 = new javax.swing.JLabel();
         jLabel8 = new javax.swing.JLabel();
+<<<<<<< HEAD
         jButton6 = new javax.swing.JButton();
         jPanel2 = new javax.swing.JPanel();
         jLabel1 = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
+=======
+        btnsoporte = new javax.swing.JButton();
+        jPanel2 = new javax.swing.JPanel();
+        jLabel1 = new javax.swing.JLabel();
+        jLabel2 = new javax.swing.JLabel();
+        jButton3 = new javax.swing.JButton();
+>>>>>>> fcee56b (Actualizado)
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setBackground(new java.awt.Color(153, 255, 255));
 
+<<<<<<< HEAD
         jPanel1.setBackground(new java.awt.Color(153, 255, 255));
 
         jLabel3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/invenmtario1.jpg"))); // NOI18N
         jLabel3.setText("Img 1");
+=======
+        jPanel1.setBackground(new java.awt.Color(255, 255, 255));
+        jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        jLabel3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/INVENTARIO_IMG1.png"))); // NOI18N
+        jLabel3.setText("Img 1");
+        jPanel1.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 102, 120, -1));
+>>>>>>> fcee56b (Actualizado)
 
         jButton1.setFont(new java.awt.Font("Arial Black", 0, 14)); // NOI18N
         jButton1.setText("Inventario");
@@ -58,6 +79,10 @@ public class Interfaz1 extends javax.swing.JFrame {
                 jButton1ActionPerformed(evt);
             }
         });
+<<<<<<< HEAD
+=======
+        jPanel1.add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 228, 129, 48));
+>>>>>>> fcee56b (Actualizado)
 
         jButton2.setFont(new java.awt.Font("Arial Black", 0, 14)); // NOI18N
         jButton2.setText("Caja");
@@ -66,6 +91,7 @@ public class Interfaz1 extends javax.swing.JFrame {
                 jButton2ActionPerformed(evt);
             }
         });
+<<<<<<< HEAD
 
         jLabel4.setText("Img2");
 
@@ -80,6 +106,30 @@ public class Interfaz1 extends javax.swing.JFrame {
         });
 
         jLabel6.setText("Img 4");
+=======
+        jPanel1.add(jButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(344, 230, 129, 48));
+
+        jLabel4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/CAJA1_IMG.png"))); // NOI18N
+        jLabel4.setText("Img2");
+        jPanel1.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(344, 104, 120, -1));
+
+        jLabel5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/INFORMES1_IMG.png"))); // NOI18N
+        jLabel5.setText("Img3");
+        jPanel1.add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(575, 98, 120, -1));
+
+        btninformes.setFont(new java.awt.Font("Arial Black", 0, 14)); // NOI18N
+        btninformes.setText("Informes");
+        btninformes.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btninformesActionPerformed(evt);
+            }
+        });
+        jPanel1.add(btninformes, new org.netbeans.lib.awtextra.AbsoluteConstraints(575, 224, 129, 48));
+
+        jLabel6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/USUARIO3_IMG.png"))); // NOI18N
+        jLabel6.setText("Img 4");
+        jPanel1.add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(129, 322, 120, -1));
+>>>>>>> fcee56b (Actualizado)
 
         jButton4.setFont(new java.awt.Font("Arial Black", 0, 14)); // NOI18N
         jButton4.setText("Usuarios");
@@ -88,6 +138,10 @@ public class Interfaz1 extends javax.swing.JFrame {
                 jButton4ActionPerformed(evt);
             }
         });
+<<<<<<< HEAD
+=======
+        jPanel1.add(jButton4, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 454, 129, 48));
+>>>>>>> fcee56b (Actualizado)
 
         jButton5.setFont(new java.awt.Font("Arial Black", 0, 14)); // NOI18N
         jButton5.setText("Manual");
@@ -96,6 +150,7 @@ public class Interfaz1 extends javax.swing.JFrame {
                 jButton5ActionPerformed(evt);
             }
         });
+<<<<<<< HEAD
 
         jLabel7.setText("Img 4");
 
@@ -110,6 +165,28 @@ public class Interfaz1 extends javax.swing.JFrame {
         });
 
         jPanel2.setBackground(new java.awt.Color(255, 153, 153));
+=======
+        jPanel1.add(jButton5, new org.netbeans.lib.awtextra.AbsoluteConstraints(344, 454, 129, 48));
+
+        jLabel7.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/MANUAL1_IMG.png"))); // NOI18N
+        jLabel7.setText("Img 4");
+        jPanel1.add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(344, 322, 120, -1));
+
+        jLabel8.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/SOPORTE1.png"))); // NOI18N
+        jLabel8.setText("Img 5");
+        jPanel1.add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(574, 322, 120, -1));
+
+        btnsoporte.setFont(new java.awt.Font("Arial Black", 0, 14)); // NOI18N
+        btnsoporte.setText("Soporte");
+        btnsoporte.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnsoporteActionPerformed(evt);
+            }
+        });
+        jPanel1.add(btnsoporte, new org.netbeans.lib.awtextra.AbsoluteConstraints(574, 454, 129, 48));
+
+        jPanel2.setBackground(new java.awt.Color(0, 140, 186));
+>>>>>>> fcee56b (Actualizado)
 
         jLabel1.setFont(new java.awt.Font("Arial Black", 0, 18)); // NOI18N
         jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
@@ -140,6 +217,7 @@ public class Interfaz1 extends javax.swing.JFrame {
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
+<<<<<<< HEAD
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
         jPanel1Layout.setHorizontalGroup(
@@ -210,11 +288,18 @@ public class Interfaz1 extends javax.swing.JFrame {
                     .addComponent(jButton6, javax.swing.GroupLayout.PREFERRED_SIZE, 48, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addContainerGap(149, Short.MAX_VALUE))
         );
+=======
+        jPanel1.add(jPanel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, -1));
+
+        jButton3.setText("jButton3");
+        jPanel1.add(jButton3, new org.netbeans.lib.awtextra.AbsoluteConstraints(830, 100, 47, 43));
+>>>>>>> fcee56b (Actualizado)
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+<<<<<<< HEAD
             .addGroup(layout.createSequentialGroup()
                 .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(0, 29, Short.MAX_VALUE))
@@ -224,6 +309,13 @@ public class Interfaz1 extends javax.swing.JFrame {
             .addGroup(layout.createSequentialGroup()
                 .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(0, 22, Short.MAX_VALUE))
+=======
+            .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+        );
+        layout.setVerticalGroup(
+            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, 673, Short.MAX_VALUE)
+>>>>>>> fcee56b (Actualizado)
         );
 
         pack();
@@ -234,12 +326,28 @@ public class Interfaz1 extends javax.swing.JFrame {
     }//GEN-LAST:event_jButton1ActionPerformed
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
+<<<<<<< HEAD
         // TODO add your handling code here:
     }//GEN-LAST:event_jButton2ActionPerformed
 
     private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_jButton3ActionPerformed
+=======
+        Caja caja = new Caja();
+        caja.setVisible(true);
+        caja.setLocationRelativeTo(null);
+        this.dispose();
+    }//GEN-LAST:event_jButton2ActionPerformed
+
+    private void btninformesActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btninformesActionPerformed
+        Informes R5 = new Informes();
+        R5.setVisible(true);
+        R5.setLocationRelativeTo(null);
+        this.dispose();
+      
+    }//GEN-LAST:event_btninformesActionPerformed
+>>>>>>> fcee56b (Actualizado)
 
     private void jButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton4ActionPerformed
         // TODO add your handling code here:
@@ -249,9 +357,19 @@ public class Interfaz1 extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_jButton5ActionPerformed
 
+<<<<<<< HEAD
     private void jButton6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton6ActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_jButton6ActionPerformed
+=======
+    private void btnsoporteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnsoporteActionPerformed
+        Soporte R8 = new Soporte();
+        R8.setVisible(true);
+        R8.setLocationRelativeTo(null);
+        this.dispose();
+        
+    }//GEN-LAST:event_btnsoporteActionPerformed
+>>>>>>> fcee56b (Actualizado)
 
     /**
      * @param args the command line arguments
@@ -284,17 +402,29 @@ public class Interfaz1 extends javax.swing.JFrame {
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
                 new Interfaz1().setVisible(true);
+<<<<<<< HEAD
+=======
+                
+>>>>>>> fcee56b (Actualizado)
             }
         });
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+<<<<<<< HEAD
+=======
+    private javax.swing.JButton btninformes;
+    private javax.swing.JButton btnsoporte;
+>>>>>>> fcee56b (Actualizado)
     private javax.swing.JButton jButton1;
     private javax.swing.JButton jButton2;
     private javax.swing.JButton jButton3;
     private javax.swing.JButton jButton4;
     private javax.swing.JButton jButton5;
+<<<<<<< HEAD
     private javax.swing.JButton jButton6;
+=======
+>>>>>>> fcee56b (Actualizado)
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;

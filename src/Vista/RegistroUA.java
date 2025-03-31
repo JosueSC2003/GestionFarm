@@ -3,11 +3,16 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
  */
 package Vista;
+<<<<<<< HEAD
 
 /**
  *
  * @author angel
  */
+=======
+import javax.swing.JOptionPane;
+
+>>>>>>> fcee56b (Actualizado)
 public class RegistroUA extends javax.swing.JFrame {
 
     /**
@@ -104,6 +109,7 @@ public class RegistroUA extends javax.swing.JFrame {
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+<<<<<<< HEAD
             .addGroup(layout.createSequentialGroup()
                 .addGap(139, 139, 139)
                 .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -115,15 +121,35 @@ public class RegistroUA extends javax.swing.JFrame {
                 .addContainerGap(49, Short.MAX_VALUE)
                 .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap())
+=======
+            .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+        );
+        layout.setVerticalGroup(
+            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+>>>>>>> fcee56b (Actualizado)
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
     private void btlsesionActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btlsesionActionPerformed
+<<<<<<< HEAD
         // TODO add your handling code here:
     }//GEN-LAST:event_btlsesionActionPerformed
 
+=======
+         
+        Interfaz1 R2 = new Interfaz1();
+        R2.setVisible(true);
+        R2.setLocationRelativeTo(null);
+        this.dispose();
+        
+    }//GEN-LAST:event_btlsesionActionPerformed
+     
+    
+    
+>>>>>>> fcee56b (Actualizado)
     /**
      * @param args the command line arguments
      */

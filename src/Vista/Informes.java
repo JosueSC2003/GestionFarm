@@ -1,15 +1,51 @@
 package Vista;
+<<<<<<< HEAD
 
+=======
+>>>>>>> fcee56b (Actualizado)
 /*
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
  */
+<<<<<<< HEAD
+=======
+import com.lowagie.text.Chunk;
+import com.lowagie.text.Document;
+import com.lowagie.text.DocumentException;
+import com.lowagie.text.Element;
+import com.lowagie.text.Font;
+import com.lowagie.text.Image;
+import com.lowagie.text.Paragraph;
+import com.lowagie.text.pdf.PdfPTable;
+import com.lowagie.text.pdf.PdfWriter;
+import java.awt.Color;
+
+import java.io.File;
+import java.io.FileNotFoundException;
+import java.io.FileOutputStream;
+import java.io.IOException;
+import java.text.SimpleDateFormat;
+import java.util.Date;
+import java.util.logging.Level;
+import java.util.logging.Logger;
+import javax.swing.JOptionPane;
+import org.apache.pdfbox.pdmodel.PDDocument;
+import org.apache.pdfbox.pdmodel.PDPage;
+import org.apache.pdfbox.pdmodel.PDPageContentStream;
+import org.apache.pdfbox.pdmodel.common.PDRectangle;
+import org.apache.pdfbox.pdmodel.font.PDType1Font;
+>>>>>>> fcee56b (Actualizado)
 
 /**
  *
  * @author angel
  */
 public class Informes extends javax.swing.JFrame {
+<<<<<<< HEAD
+=======
+    
+
+>>>>>>> fcee56b (Actualizado)
 
     /**
      * Creates new form Informes
@@ -27,6 +63,7 @@ public class Informes extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+<<<<<<< HEAD
         jScrollPane1 = new javax.swing.JScrollPane();
         jList1 = new javax.swing.JList<>();
         jScrollPane2 = new javax.swing.JScrollPane();
@@ -39,11 +76,23 @@ public class Informes extends javax.swing.JFrame {
         jPanel2 = new javax.swing.JPanel();
         jLabel1 = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
+=======
+        jPanel2 = new javax.swing.JPanel();
+        jLabel1 = new javax.swing.JLabel();
+        jLabel2 = new javax.swing.JLabel();
+        btnatrasinfo = new javax.swing.JButton();
+        cortecaja = new javax.swing.JButton();
+        reporteventas = new javax.swing.JButton();
+        reporteproveedores = new javax.swing.JButton();
+        devoluciones = new javax.swing.JButton();
+        jPanel1 = new javax.swing.JPanel();
+>>>>>>> fcee56b (Actualizado)
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setBackground(new java.awt.Color(153, 255, 255));
         setBounds(new java.awt.Rectangle(0, 0, 0, 0));
         setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
+<<<<<<< HEAD
 
         jList1.setModel(new javax.swing.AbstractListModel<String>() {
             String[] strings = { "Corte de Caja - Hoy", "- - - - - - - - - - - - - - - - - - - - - - - - - - - - -", "Ingresos: Precios", "Gastos: Precios", "Saldo Final: Precios" };
@@ -80,6 +129,9 @@ public class Informes extends javax.swing.JFrame {
                 jButton2ActionPerformed(evt);
             }
         });
+=======
+        getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+>>>>>>> fcee56b (Actualizado)
 
         jPanel2.setBackground(new java.awt.Color(255, 153, 153));
 
@@ -100,7 +152,11 @@ public class Informes extends javax.swing.JFrame {
                 .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 125, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 418, javax.swing.GroupLayout.PREFERRED_SIZE)
+<<<<<<< HEAD
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+=======
+                .addContainerGap(171, Short.MAX_VALUE))
+>>>>>>> fcee56b (Actualizado)
         );
         jPanel2Layout.setVerticalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -112,6 +168,7 @@ public class Informes extends javax.swing.JFrame {
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
+<<<<<<< HEAD
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
@@ -158,6 +215,105 @@ public class Informes extends javax.swing.JFrame {
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_jButton2ActionPerformed
+=======
+        getContentPane().add(jPanel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(6, 0, 726, -1));
+
+        btnatrasinfo.setText("Atras");
+        btnatrasinfo.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnatrasinfoActionPerformed(evt);
+            }
+        });
+        getContentPane().add(btnatrasinfo, new org.netbeans.lib.awtextra.AbsoluteConstraints(12, 101, -1, -1));
+
+        cortecaja.setBackground(new java.awt.Color(204, 255, 255));
+        cortecaja.setFont(new java.awt.Font("Arial Black", 0, 14)); // NOI18N
+        cortecaja.setText("Corte de Caja");
+        cortecaja.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                cortecajaActionPerformed(evt);
+            }
+        });
+        getContentPane().add(cortecaja, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 260, 270, -1));
+
+        reporteventas.setBackground(new java.awt.Color(204, 255, 255));
+        reporteventas.setFont(new java.awt.Font("Arial Black", 0, 14)); // NOI18N
+        reporteventas.setText("Reporte de ventas");
+        reporteventas.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                reporteventasActionPerformed(evt);
+            }
+        });
+        getContentPane().add(reporteventas, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 390, 270, -1));
+
+        reporteproveedores.setBackground(new java.awt.Color(204, 255, 255));
+        reporteproveedores.setFont(new java.awt.Font("Arial Black", 0, 14)); // NOI18N
+        reporteproveedores.setText("Corte de Caja General");
+        reporteproveedores.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                reporteproveedoresActionPerformed(evt);
+            }
+        });
+        getContentPane().add(reporteproveedores, new org.netbeans.lib.awtextra.AbsoluteConstraints(440, 260, 270, -1));
+
+        devoluciones.setBackground(new java.awt.Color(204, 255, 255));
+        devoluciones.setFont(new java.awt.Font("Arial Black", 0, 14)); // NOI18N
+        devoluciones.setText("Devoluciones y Calcelaciones");
+        devoluciones.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                devolucionesActionPerformed(evt);
+            }
+        });
+        getContentPane().add(devoluciones, new org.netbeans.lib.awtextra.AbsoluteConstraints(440, 390, 270, -1));
+
+        javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
+        jPanel1.setLayout(jPanel1Layout);
+        jPanel1Layout.setHorizontalGroup(
+            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 730, Short.MAX_VALUE)
+        );
+        jPanel1Layout.setVerticalGroup(
+            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 100, Short.MAX_VALUE)
+        );
+
+        getContentPane().add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 490, 730, -1));
+
+        pack();
+    }// </editor-fold>//GEN-END:initComponents
+
+        
+    private void btnatrasinfoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnatrasinfoActionPerformed
+        this.dispose();
+        Interfaz1 R2 = new Interfaz1();
+        R2.setVisible(true);
+        R2.setLocationRelativeTo(null);
+        
+    }//GEN-LAST:event_btnatrasinfoActionPerformed
+
+    private void cortecajaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cortecajaActionPerformed
+    pdfcorte();
+    n1++;
+    
+    
+    }//GEN-LAST:event_cortecajaActionPerformed
+
+    private void reporteventasActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_reporteventasActionPerformed
+pdf();       
+n++;
+int c=n;
+    }//GEN-LAST:event_reporteventasActionPerformed
+
+    private void reporteproveedoresActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_reporteproveedoresActionPerformed
+pdfcortegeneral();
+n2++;// TODO add your handling code here:
+    }//GEN-LAST:event_reporteproveedoresActionPerformed
+
+    private void devolucionesActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_devolucionesActionPerformed
+pdfdevolucionescalcelaciones();
+n3++;// TODO add your handling code here:
+    }//GEN-LAST:event_devolucionesActionPerformed
+>>>>>>> fcee56b (Actualizado)
 
     /**
      * @param args the command line arguments
@@ -194,6 +350,7 @@ public class Informes extends javax.swing.JFrame {
         });
     }
 
+<<<<<<< HEAD
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton jButton2;
     private javax.swing.JLabel jLabel1;
@@ -209,3 +366,254 @@ public class Informes extends javax.swing.JFrame {
     private javax.swing.JScrollPane jScrollPane4;
     // End of variables declaration//GEN-END:variables
 }
+=======
+    
+    
+    // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton btnatrasinfo;
+    private javax.swing.JButton cortecaja;
+    private javax.swing.JButton devoluciones;
+    private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel2;
+    private javax.swing.JPanel jPanel1;
+    private javax.swing.JPanel jPanel2;
+    private javax.swing.JButton reporteproveedores;
+    private javax.swing.JButton reporteventas;
+    // End of variables declaration//GEN-END:variables
+
+      int n=0;
+      int n1=0;
+      int n2=0;
+      int n3=0;
+      int n4=0;
+      
+    private void pdf(){
+        try {
+            
+          
+            
+            FileOutputStream archivo;
+            File file = new File("src/pdf/Venta"+n+".pdf");
+            archivo = new FileOutputStream(file);
+            Document doc = new Document();
+            PdfWriter.getInstance(doc, archivo);
+            doc.open();
+            Image img = Image.getInstance("src/imagenes/soporte.jpg");
+            Paragraph fecha = new Paragraph();
+            Font negrita = new Font(Font.TIMES_ROMAN, 12, Font.BOLD,Color.BLUE);
+            fecha.add(Chunk.NEWLINE);
+            Date date = new Date();
+            fecha.add("Factura: 1\n"+"Fecha: "+new SimpleDateFormat("DD-MM-YYYY".formatted(date)+"\n\n"));
+            
+            PdfPTable Encabezado = new PdfPTable(4);
+            Encabezado.setWidthPercentage(100);
+            Encabezado.getDefaultCell().setBorder(0);
+            float[] ColumnaEncabezado = new float[]{20f, 30f, 70f, 40f};
+            Encabezado.setWidths(ColumnaEncabezado);
+             Encabezado.setHorizontalAlignment(Element.ALIGN_LEFT);
+            
+             Encabezado.addCell(img);
+             String roo = "212456545";
+             String nom = "REPORTE DE VENTA";
+             String tel = "7444203005";
+             String dir = "Acapulco";
+             String ra = "jija";
+             
+            Encabezado.addCell("");
+            Encabezado.addCell("Ruc: "+roo+ "\nNombre: "+nom+"\nTelefono: "+tel+ "\n direccion: "+dir+"\nRazon: "+ra);
+            Encabezado.addCell(fecha);
+            doc.add(Encabezado);
+          
+            
+            doc.close();
+            archivo.close();
+            
+            JOptionPane.showMessageDialog(this, "se genero el documento: ");
+            
+        }
+                     catch (DocumentException | FileNotFoundException ex) {
+                        JOptionPane.showMessageDialog(this, "Error al generar el documento: "+ ex.getMessage());
+                     }
+          
+        catch (Exception e) {
+        }
+    
+    
+}
+    
+private void pdfcorte(){
+        try {
+            
+         
+            
+            FileOutputStream archivo;
+            File file = new File("src/pdf/Corte"+n1+".pdf");
+            archivo = new FileOutputStream(file);
+            Document doc = new Document();
+            PdfWriter.getInstance(doc, archivo);
+            doc.open();
+            Image img = Image.getInstance("src/imagenes/soporte.jpg");
+            Paragraph fecha = new Paragraph();
+            Font negrita = new Font(Font.TIMES_ROMAN, 12, Font.BOLD,Color.BLUE);
+            fecha.add(Chunk.NEWLINE);
+            Date date= new Date();
+            
+            
+            fecha.add("factura: 1\n"+"Fecha: "+new SimpleDateFormat("DD-MM-YYYY".formatted(date)+"\n\n"));
+            
+            PdfPTable Encabezado = new PdfPTable(4);
+            Encabezado.setWidthPercentage(100);
+            Encabezado.getDefaultCell().setBorder(0);
+            float[] ColumnaEncabezado = new float[]{20f, 30f, 70f, 40f};
+            Encabezado.setWidths(ColumnaEncabezado);
+             Encabezado.setHorizontalAlignment(Element.ALIGN_LEFT);
+            
+             Encabezado.addCell(img);
+             String roo = "212456545";
+             String nom = "FARMACIA POCHOCO";
+             String tel = "7444203005";
+             String dir = "Acapulco";
+             String ra = "jija";
+             String p = "s.v de SA";
+                   
+             
+             Encabezado.addCell("");
+             Encabezado.addCell("Ruc: "+roo+ "\nNombre: "+nom+"\nTelefono: "+tel+ "\n direccion: "+dir+"\nRazon: "+ra);
+            Encabezado.addCell(fecha);
+            doc.add(Encabezado);
+             
+            
+            
+            doc.close();
+            archivo.close();
+            
+            JOptionPane.showMessageDialog(this, "se genero el documento: ");
+            
+        }
+                     catch (DocumentException | FileNotFoundException ex) {
+                        JOptionPane.showMessageDialog(this, "Error al generar el documento: "+ ex.getMessage());
+                     }
+          
+        catch (Exception e) {
+        }
+}
+
+private void pdfcortegeneral(){
+        try {
+            
+         
+            
+            FileOutputStream archivo;
+            File file = new File("src/pdf/cortegeneral"+n2+".pdf");
+            archivo = new FileOutputStream(file);
+            Document doc = new Document();
+            PdfWriter.getInstance(doc, archivo);
+            doc.open();
+            Image img = Image.getInstance("src/imagenes/soporte.jpg");
+            Paragraph fecha = new Paragraph();
+            Font negrita = new Font(Font.TIMES_ROMAN, 12, Font.BOLD,Color.BLUE);
+            fecha.add(Chunk.NEWLINE);
+            Date date= new Date();
+            
+            
+            fecha.add("factura: 1\n"+"Fecha: "+new SimpleDateFormat("DD-MM-YYYY".formatted(date)+"\n\n"));
+            
+            PdfPTable Encabezado = new PdfPTable(4);
+            Encabezado.setWidthPercentage(100);
+            Encabezado.getDefaultCell().setBorder(0);
+            float[] ColumnaEncabezado = new float[]{20f, 30f, 70f, 40f};
+            Encabezado.setWidths(ColumnaEncabezado);
+             Encabezado.setHorizontalAlignment(Element.ALIGN_LEFT);
+            
+             Encabezado.addCell(img);
+             String roo = "212456545";
+             String nom = "CORTE GENERAL";
+             String tel = "7444203005";
+             String dir = "Acapulco";
+             String ra = "jija";
+             String p = "s.v de SA";
+                   
+             
+             Encabezado.addCell("");
+             Encabezado.addCell("Ruc: "+roo+ "\nNombre: "+nom+"\nTelefono: "+tel+ "\n direccion: "+dir+"\nRazon: "+ra);
+            Encabezado.addCell(fecha);
+            doc.add(Encabezado);
+             
+            
+            
+            doc.close();
+            archivo.close();
+            
+            JOptionPane.showMessageDialog(this, "se genero el documento: ");
+            
+        }
+                     catch (DocumentException | FileNotFoundException ex) {
+                        JOptionPane.showMessageDialog(this, "Error al generar el documento: "+ ex.getMessage());
+                     }
+          
+        catch (Exception e) {
+        }
+}
+
+
+private void pdfdevolucionescalcelaciones(){
+        try {
+            
+         
+            
+            FileOutputStream archivo;
+            File file = new File("src/pdf/devolucionescalcelaciones"+n3+".pdf");
+            archivo = new FileOutputStream(file);
+            Document doc = new Document();
+            PdfWriter.getInstance(doc, archivo);
+            doc.open();
+            Image img = Image.getInstance("src/imagenes/soporte.jpg");
+            Paragraph fecha = new Paragraph();
+            Font negrita = new Font(Font.TIMES_ROMAN, 12, Font.BOLD,Color.BLUE);
+            fecha.add(Chunk.NEWLINE);
+            Date date= new Date();
+            
+            
+            fecha.add("factura: 1\n"+"Fecha: "+new SimpleDateFormat("DD-MM-YYYY".formatted(date)+"\n\n"));
+            
+            PdfPTable Encabezado = new PdfPTable(4);
+            Encabezado.setWidthPercentage(100);
+            Encabezado.getDefaultCell().setBorder(0);
+            float[] ColumnaEncabezado = new float[]{20f, 30f, 70f, 40f};
+            Encabezado.setWidths(ColumnaEncabezado);
+             Encabezado.setHorizontalAlignment(Element.ALIGN_LEFT);
+            
+             Encabezado.addCell(img);
+             String roo = "212456545";
+             String nom = "DEVOLUCIONES Y CALCELACIONES";
+             String tel = "7444203005";
+             String dir = "Acapulco";
+             String ra = "jija";
+             String p = "s.v de SA";
+                   
+             
+             Encabezado.addCell("");
+             Encabezado.addCell("Ruc: "+roo+ "\nNombre: "+nom+"\nTelefono: "+tel+ "\n direccion: "+dir+"\nRazon: "+ra);
+            Encabezado.addCell(fecha);
+            doc.add(Encabezado);
+             
+            
+            
+            doc.close();
+            archivo.close();
+            
+            JOptionPane.showMessageDialog(this, "se genero el documento: ");
+            
+        }
+                     catch (DocumentException | FileNotFoundException ex) {
+                        JOptionPane.showMessageDialog(this, "Error al generar el documento: "+ ex.getMessage());
+                     }
+          
+        catch (Exception e) {
+        }
+}
+
+}
+
+
+>>>>>>> fcee56b (Actualizado)

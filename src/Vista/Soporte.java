@@ -36,6 +36,10 @@ public class Soporte extends javax.swing.JFrame {
         jLabel8 = new javax.swing.JLabel();
         jScrollPane3 = new javax.swing.JScrollPane();
         jTextArea3 = new javax.swing.JTextArea();
+<<<<<<< HEAD
+=======
+        btnatrassop = new javax.swing.JButton();
+>>>>>>> fcee56b (Actualizado)
         jPanel5 = new javax.swing.JPanel();
         jLabel5 = new javax.swing.JLabel();
         jLabel6 = new javax.swing.JLabel();
@@ -113,6 +117,16 @@ public class Soporte extends javax.swing.JFrame {
         jTextArea3.setBorder(null);
         jScrollPane3.setViewportView(jTextArea3);
 
+<<<<<<< HEAD
+=======
+        btnatrassop.setText("Atras");
+        btnatrassop.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnatrassopActionPerformed(evt);
+            }
+        });
+
+>>>>>>> fcee56b (Actualizado)
         javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
         jPanel2.setLayout(jPanel2Layout);
         jPanel2Layout.setHorizontalGroup(
@@ -126,13 +140,25 @@ public class Soporte extends javax.swing.JFrame {
                     .addComponent(jScrollPane3)
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel2Layout.createSequentialGroup()
                         .addGap(0, 0, Short.MAX_VALUE)
+<<<<<<< HEAD
                         .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 865, javax.swing.GroupLayout.PREFERRED_SIZE)))
+=======
+                        .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 865, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(jPanel2Layout.createSequentialGroup()
+                        .addComponent(btnatrassop)
+                        .addGap(0, 0, Short.MAX_VALUE)))
+>>>>>>> fcee56b (Actualizado)
                 .addContainerGap())
         );
         jPanel2Layout.setVerticalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel2Layout.createSequentialGroup()
+<<<<<<< HEAD
                 .addContainerGap(18, Short.MAX_VALUE)
+=======
+                .addComponent(btnatrassop)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+>>>>>>> fcee56b (Actualizado)
                 .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 64, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jLabel3)
@@ -317,6 +343,16 @@ public class Soporte extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_jTextField3ActionPerformed
 
+<<<<<<< HEAD
+=======
+    private void btnatrassopActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnatrassopActionPerformed
+       this.dispose();
+       Interfaz1 R2 = new Interfaz1();
+        R2.setVisible(true);
+        R2.setLocationRelativeTo(null);
+    }//GEN-LAST:event_btnatrassopActionPerformed
+
+>>>>>>> fcee56b (Actualizado)
     /**
      * @param args the command line arguments
      */
@@ -353,6 +389,10 @@ public class Soporte extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+<<<<<<< HEAD
+=======
+    private javax.swing.JButton btnatrassop;
+>>>>>>> fcee56b (Actualizado)
     private javax.swing.JButton jButton1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
