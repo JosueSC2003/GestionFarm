@@ -1,21 +1,20 @@
-package Vista;
-<<<<<<< HEAD
 
-=======
->>>>>>> fcee56b (Actualizado)
 /*
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
  */
-<<<<<<< HEAD
-=======
+package Vista;
+import Conexiones.Conexion;
 import com.lowagie.text.Chunk;
 import com.lowagie.text.Document;
 import com.lowagie.text.DocumentException;
 import com.lowagie.text.Element;
 import com.lowagie.text.Font;
 import com.lowagie.text.Image;
+import com.lowagie.text.PageSize;
 import com.lowagie.text.Paragraph;
+import com.lowagie.text.Phrase;
+import com.lowagie.text.pdf.PdfPCell;
 import com.lowagie.text.pdf.PdfPTable;
 import com.lowagie.text.pdf.PdfWriter;
 import java.awt.Color;
@@ -24,28 +23,31 @@ import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
 import java.io.IOException;
+import java.sql.Connection;
 import java.text.SimpleDateFormat;
+import java.util.Calendar;
 import java.util.Date;
 import java.util.logging.Level;
 import java.util.logging.Logger;
+import javax.swing.ImageIcon;
 import javax.swing.JOptionPane;
 import org.apache.pdfbox.pdmodel.PDDocument;
 import org.apache.pdfbox.pdmodel.PDPage;
 import org.apache.pdfbox.pdmodel.PDPageContentStream;
 import org.apache.pdfbox.pdmodel.common.PDRectangle;
 import org.apache.pdfbox.pdmodel.font.PDType1Font;
->>>>>>> fcee56b (Actualizado)
+
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.sql.SQLException;
 
 /**
  *
  * @author angel
  */
 public class Informes extends javax.swing.JFrame {
-<<<<<<< HEAD
-=======
     
 
->>>>>>> fcee56b (Actualizado)
 
     /**
      * Creates new form Informes
@@ -63,221 +65,207 @@ public class Informes extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-<<<<<<< HEAD
-        jScrollPane1 = new javax.swing.JScrollPane();
-        jList1 = new javax.swing.JList<>();
-        jScrollPane2 = new javax.swing.JScrollPane();
-        jList2 = new javax.swing.JList<>();
-        jScrollPane3 = new javax.swing.JScrollPane();
-        jList3 = new javax.swing.JList<>();
-        jScrollPane4 = new javax.swing.JScrollPane();
-        jList4 = new javax.swing.JList<>();
-        jButton2 = new javax.swing.JButton();
         jPanel2 = new javax.swing.JPanel();
         jLabel1 = new javax.swing.JLabel();
-        jLabel2 = new javax.swing.JLabel();
-=======
-        jPanel2 = new javax.swing.JPanel();
-        jLabel1 = new javax.swing.JLabel();
-        jLabel2 = new javax.swing.JLabel();
-        btnatrasinfo = new javax.swing.JButton();
-        cortecaja = new javax.swing.JButton();
-        reporteventas = new javax.swing.JButton();
-        reporteproveedores = new javax.swing.JButton();
-        devoluciones = new javax.swing.JButton();
+        jLabel5 = new javax.swing.JLabel();
         jPanel1 = new javax.swing.JPanel();
->>>>>>> fcee56b (Actualizado)
+        inventarioactual = new javax.swing.JButton();
+        proximosacaducar = new javax.swing.JButton();
+        jLabel3 = new javax.swing.JLabel();
+        jLabel4 = new javax.swing.JLabel();
+        devoluciones = new javax.swing.JButton();
+        reporteproveedores = new javax.swing.JButton();
+        cortecaja = new javax.swing.JButton();
+        jPanel3 = new javax.swing.JPanel();
+        jPanel4 = new javax.swing.JPanel();
+        jPanel5 = new javax.swing.JPanel();
+        productosmasvendidos = new javax.swing.JButton();
+        btnatrasinfo = new javax.swing.JButton();
+        reporteventas = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-        setBackground(new java.awt.Color(153, 255, 255));
+        setBackground(new java.awt.Color(255, 153, 153));
         setBounds(new java.awt.Rectangle(0, 0, 0, 0));
         setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
-<<<<<<< HEAD
-
-        jList1.setModel(new javax.swing.AbstractListModel<String>() {
-            String[] strings = { "Corte de Caja - Hoy", "- - - - - - - - - - - - - - - - - - - - - - - - - - - - -", "Ingresos: Precios", "Gastos: Precios", "Saldo Final: Precios" };
-            public int getSize() { return strings.length; }
-            public String getElementAt(int i) { return strings[i]; }
-        });
-        jList1.setName(""); // NOI18N
-        jScrollPane1.setViewportView(jList1);
-
-        jList2.setModel(new javax.swing.AbstractListModel<String>() {
-            String[] strings = { "Devoluciones y Calcelaciones - Hoy", "- - - - - - - - - -- - - - - - - - - - - - - - - - - - - - -", "Numero Total de Devoluciones: 3", "Motivos de devolucion", "- Cliente recibio el producto equivocado (2 casos)", "- Producto danano (2 casos)", "Monto total reembolsado: precio" };
-            public int getSize() { return strings.length; }
-            public String getElementAt(int i) { return strings[i]; }
-        });
-        jScrollPane2.setViewportView(jList2);
-
-        jList3.setModel(new javax.swing.AbstractListModel<String>() {
-            String[] strings = { "Reporte de Proveedores", "- - - - - - - - - - - - - - - - - - - - - - - - - - - - -", "Proveedor: FarmaPlus(ejemplo)", "- Ultima entrega: 18 de febrero", "- Proximo pedido: 25 de febrero", "Proveedor: SalusExpress", "- Ultima entrega: 15 de febrero", "- Proximo pedido: 22 de febrero" };
-            public int getSize() { return strings.length; }
-            public String getElementAt(int i) { return strings[i]; }
-        });
-        jScrollPane3.setViewportView(jList3);
-
-        jList4.setModel(new javax.swing.AbstractListModel<String>() {
-            String[] strings = { "Reporte de Ventas - Hoy", "- - - - - - - - - -- - - - - - - - - - - - - - - - - - - - -", "Total de Productos Vendidos: cant unidades", "Producto mas vendido: Nom produc", "Hora de mayor venta: 1:00 - 2:00", "Clientes frecuentes:", "Metodos de pagos mas usados:" };
-            public int getSize() { return strings.length; }
-            public String getElementAt(int i) { return strings[i]; }
-        });
-        jScrollPane4.setViewportView(jList4);
-
-        jButton2.setText("Guardar Datos");
-        jButton2.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton2ActionPerformed(evt);
-            }
-        });
-=======
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
->>>>>>> fcee56b (Actualizado)
 
-        jPanel2.setBackground(new java.awt.Color(255, 153, 153));
+        jPanel2.setBackground(new java.awt.Color(0, 140, 186));
 
-        jLabel1.setFont(new java.awt.Font("Arial Black", 0, 18)); // NOI18N
+        jLabel1.setFont(new java.awt.Font("Arial Black", 0, 24)); // NOI18N
         jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel1.setText("Informe de la farmacia");
+        jLabel1.setText("INFORMES");
         jLabel1.setToolTipText("");
 
-        jLabel2.setBackground(new java.awt.Color(153, 153, 153));
-        jLabel2.setText("Logo");
+        jLabel5.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/ESOBRAD2.jpg"))); // NOI18N
 
         javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
         jPanel2.setLayout(jPanel2Layout);
         jPanel2Layout.setHorizontalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel2Layout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 125, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(jLabel5)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 418, javax.swing.GroupLayout.PREFERRED_SIZE)
-<<<<<<< HEAD
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-=======
-                .addContainerGap(171, Short.MAX_VALUE))
->>>>>>> fcee56b (Actualizado)
+                .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 298, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(216, Short.MAX_VALUE))
         );
         jPanel2Layout.setVerticalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(jLabel5, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
             .addGroup(jPanel2Layout.createSequentialGroup()
-                .addGap(1, 1, 1)
-                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 41, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 89, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(30, 30, 30)
+                .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 41, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
-<<<<<<< HEAD
-        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
-        getContentPane().setLayout(layout);
-        layout.setHorizontalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(jPanel2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-            .addGroup(layout.createSequentialGroup()
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(63, 63, 63)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                            .addComponent(jScrollPane3, javax.swing.GroupLayout.DEFAULT_SIZE, 246, Short.MAX_VALUE)
-                            .addComponent(jScrollPane1))
-                        .addGap(82, 82, 82)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addComponent(jScrollPane4, javax.swing.GroupLayout.PREFERRED_SIZE, 279, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(297, 297, 297)
-                        .addComponent(jButton2)))
-                .addContainerGap(62, Short.MAX_VALUE))
-        );
-        layout.setVerticalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(34, 34, 34)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(jScrollPane4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(18, 18, 18)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jScrollPane3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(18, 18, 18)
-                .addComponent(jButton2)
-                .addContainerGap(30, Short.MAX_VALUE))
-        );
+        getContentPane().add(jPanel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(6, 0, 780, -1));
 
-        pack();
-    }// </editor-fold>//GEN-END:initComponents
+        jPanel1.setBackground(new java.awt.Color(255, 255, 255));
+        jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jButton2ActionPerformed
-=======
-        getContentPane().add(jPanel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(6, 0, 726, -1));
-
-        btnatrasinfo.setText("Atras");
-        btnatrasinfo.addActionListener(new java.awt.event.ActionListener() {
+        inventarioactual.setBackground(new java.awt.Color(102, 204, 255));
+        inventarioactual.setFont(new java.awt.Font("Arial Black", 0, 14)); // NOI18N
+        inventarioactual.setText("Inventario Actual");
+        inventarioactual.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        inventarioactual.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnatrasinfoActionPerformed(evt);
+                inventarioactualActionPerformed(evt);
             }
         });
-        getContentPane().add(btnatrasinfo, new org.netbeans.lib.awtextra.AbsoluteConstraints(12, 101, -1, -1));
+        jPanel1.add(inventarioactual, new org.netbeans.lib.awtextra.AbsoluteConstraints(107, 109, 270, 40));
 
-        cortecaja.setBackground(new java.awt.Color(204, 255, 255));
-        cortecaja.setFont(new java.awt.Font("Arial Black", 0, 14)); // NOI18N
-        cortecaja.setText("Corte de Caja");
-        cortecaja.addActionListener(new java.awt.event.ActionListener() {
+        proximosacaducar.setBackground(new java.awt.Color(102, 204, 255));
+        proximosacaducar.setFont(new java.awt.Font("Arial Black", 0, 14)); // NOI18N
+        proximosacaducar.setText("Productos próximos a caducar");
+        proximosacaducar.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        proximosacaducar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                cortecajaActionPerformed(evt);
+                proximosacaducarActionPerformed(evt);
             }
         });
-        getContentPane().add(cortecaja, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 260, 270, -1));
+        jPanel1.add(proximosacaducar, new org.netbeans.lib.awtextra.AbsoluteConstraints(107, 187, 270, 40));
 
-        reporteventas.setBackground(new java.awt.Color(204, 255, 255));
-        reporteventas.setFont(new java.awt.Font("Arial Black", 0, 14)); // NOI18N
-        reporteventas.setText("Reporte de ventas");
-        reporteventas.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                reporteventasActionPerformed(evt);
-            }
-        });
-        getContentPane().add(reporteventas, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 390, 270, -1));
+        jLabel3.setBackground(new java.awt.Color(0, 140, 186));
+        jLabel3.setFont(new java.awt.Font("Arial Black", 0, 18)); // NOI18N
+        jLabel3.setText("Ventas y Finanzas");
+        jPanel1.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(504, 37, -1, -1));
 
-        reporteproveedores.setBackground(new java.awt.Color(204, 255, 255));
-        reporteproveedores.setFont(new java.awt.Font("Arial Black", 0, 14)); // NOI18N
-        reporteproveedores.setText("Corte de Caja General");
-        reporteproveedores.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                reporteproveedoresActionPerformed(evt);
-            }
-        });
-        getContentPane().add(reporteproveedores, new org.netbeans.lib.awtextra.AbsoluteConstraints(440, 260, 270, -1));
+        jLabel4.setFont(new java.awt.Font("Arial Black", 0, 18)); // NOI18N
+        jLabel4.setText("Seccion de Inventario");
+        jPanel1.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(139, 37, -1, -1));
 
-        devoluciones.setBackground(new java.awt.Color(204, 255, 255));
+        devoluciones.setBackground(new java.awt.Color(102, 204, 255));
         devoluciones.setFont(new java.awt.Font("Arial Black", 0, 14)); // NOI18N
         devoluciones.setText("Devoluciones y Calcelaciones");
+        devoluciones.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         devoluciones.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 devolucionesActionPerformed(evt);
             }
         });
-        getContentPane().add(devoluciones, new org.netbeans.lib.awtextra.AbsoluteConstraints(440, 390, 270, -1));
+        jPanel1.add(devoluciones, new org.netbeans.lib.awtextra.AbsoluteConstraints(461, 360, 270, 40));
 
-        javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
-        jPanel1.setLayout(jPanel1Layout);
-        jPanel1Layout.setHorizontalGroup(
-            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 730, Short.MAX_VALUE)
+        reporteproveedores.setBackground(new java.awt.Color(102, 204, 255));
+        reporteproveedores.setFont(new java.awt.Font("Arial Black", 0, 14)); // NOI18N
+        reporteproveedores.setText("Corte de Caja General");
+        reporteproveedores.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        reporteproveedores.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                reporteproveedoresActionPerformed(evt);
+            }
+        });
+        jPanel1.add(reporteproveedores, new org.netbeans.lib.awtextra.AbsoluteConstraints(461, 187, 270, 40));
+
+        cortecaja.setBackground(new java.awt.Color(102, 204, 255));
+        cortecaja.setFont(new java.awt.Font("Arial Black", 0, 14)); // NOI18N
+        cortecaja.setText("Corte de Caja");
+        cortecaja.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        cortecaja.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                cortecajaActionPerformed(evt);
+            }
+        });
+        jPanel1.add(cortecaja, new org.netbeans.lib.awtextra.AbsoluteConstraints(461, 109, 270, 40));
+
+        jPanel3.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        jPanel4.setBackground(new java.awt.Color(0, 140, 186));
+
+        javax.swing.GroupLayout jPanel4Layout = new javax.swing.GroupLayout(jPanel4);
+        jPanel4.setLayout(jPanel4Layout);
+        jPanel4Layout.setHorizontalGroup(
+            jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 790, Short.MAX_VALUE)
         );
-        jPanel1Layout.setVerticalGroup(
-            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 100, Short.MAX_VALUE)
+        jPanel4Layout.setVerticalGroup(
+            jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 40, Short.MAX_VALUE)
         );
 
-        getContentPane().add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 490, 730, -1));
+        jPanel3.add(jPanel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 20, 790, 40));
+
+        jPanel5.setBackground(new java.awt.Color(255, 255, 255));
+
+        productosmasvendidos.setBackground(new java.awt.Color(102, 204, 255));
+        productosmasvendidos.setFont(new java.awt.Font("Arial Black", 0, 14)); // NOI18N
+        productosmasvendidos.setText("Productos más vendidos");
+        productosmasvendidos.setToolTipText("");
+        productosmasvendidos.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        productosmasvendidos.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                productosmasvendidosActionPerformed(evt);
+            }
+        });
+
+        btnatrasinfo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/btnRetroceso.jpg"))); // NOI18N
+        btnatrasinfo.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnatrasinfoActionPerformed(evt);
+            }
+        });
+
+        reporteventas.setBackground(new java.awt.Color(102, 204, 255));
+        reporteventas.setFont(new java.awt.Font("Arial Black", 0, 14)); // NOI18N
+        reporteventas.setText("Reporte de ventas");
+        reporteventas.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        reporteventas.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                reporteventasActionPerformed(evt);
+            }
+        });
+
+        javax.swing.GroupLayout jPanel5Layout = new javax.swing.GroupLayout(jPanel5);
+        jPanel5.setLayout(jPanel5Layout);
+        jPanel5Layout.setHorizontalGroup(
+            jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel5Layout.createSequentialGroup()
+                .addGap(108, 108, 108)
+                .addComponent(productosmasvendidos, javax.swing.GroupLayout.PREFERRED_SIZE, 271, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 82, Short.MAX_VALUE)
+                .addComponent(reporteventas, javax.swing.GroupLayout.PREFERRED_SIZE, 270, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(59, 59, 59))
+            .addGroup(jPanel5Layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(btnatrasinfo, javax.swing.GroupLayout.PREFERRED_SIZE, 54, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+        );
+        jPanel5Layout.setVerticalGroup(
+            jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel5Layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(btnatrasinfo, javax.swing.GroupLayout.PREFERRED_SIZE, 43, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 149, Short.MAX_VALUE)
+                .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(productosmasvendidos, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(reporteventas, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(172, 172, 172))
+        );
+
+        jPanel3.add(jPanel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 60, 790, 410));
+
+        jPanel1.add(jPanel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 10, 790, 480));
+
+        getContentPane().add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 90, 790, 500));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -298,6 +286,8 @@ public class Informes extends javax.swing.JFrame {
     
     }//GEN-LAST:event_cortecajaActionPerformed
 
+      
+    
     private void reporteventasActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_reporteventasActionPerformed
 pdf();       
 n++;
@@ -310,10 +300,24 @@ n2++;// TODO add your handling code here:
     }//GEN-LAST:event_reporteproveedoresActionPerformed
 
     private void devolucionesActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_devolucionesActionPerformed
-pdfdevolucionescalcelaciones();
+pdfdevoluciones();
 n3++;// TODO add your handling code here:
     }//GEN-LAST:event_devolucionesActionPerformed
->>>>>>> fcee56b (Actualizado)
+
+    private void inventarioactualActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_inventarioactualActionPerformed
+        pdfinventarioactual();
+n4++;// TODO add your handling code here:
+    }//GEN-LAST:event_inventarioactualActionPerformed
+
+    private void proximosacaducarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_proximosacaducarActionPerformed
+        proximosacaducar ();
+n5++;// TODO add your handling code here:
+    }//GEN-LAST:event_proximosacaducarActionPerformed
+
+    private void productosmasvendidosActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_productosmasvendidosActionPerformed
+        pdfproductosmasvendidos();
+n6++;// TODO add your handling code here:
+    }//GEN-LAST:event_productosmasvendidosActionPerformed
 
     /**
      * @param args the command line arguments
@@ -350,270 +354,883 @@ n3++;// TODO add your handling code here:
         });
     }
 
-<<<<<<< HEAD
-    // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton jButton2;
-    private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel jLabel2;
-    private javax.swing.JList<String> jList1;
-    private javax.swing.JList<String> jList2;
-    private javax.swing.JList<String> jList3;
-    private javax.swing.JList<String> jList4;
-    private javax.swing.JPanel jPanel2;
-    private javax.swing.JScrollPane jScrollPane1;
-    private javax.swing.JScrollPane jScrollPane2;
-    private javax.swing.JScrollPane jScrollPane3;
-    private javax.swing.JScrollPane jScrollPane4;
-    // End of variables declaration//GEN-END:variables
-}
-=======
     
     
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btnatrasinfo;
     private javax.swing.JButton cortecaja;
     private javax.swing.JButton devoluciones;
+    private javax.swing.JButton inventarioactual;
     private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel jLabel2;
+    private javax.swing.JLabel jLabel3;
+    private javax.swing.JLabel jLabel4;
+    private javax.swing.JLabel jLabel5;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
+    private javax.swing.JPanel jPanel3;
+    private javax.swing.JPanel jPanel4;
+    private javax.swing.JPanel jPanel5;
+    private javax.swing.JButton productosmasvendidos;
+    private javax.swing.JButton proximosacaducar;
     private javax.swing.JButton reporteproveedores;
     private javax.swing.JButton reporteventas;
     // End of variables declaration//GEN-END:variables
 
-      int n=0;
-      int n1=0;
-      int n2=0;
-      int n3=0;
+      int n=0;      
+      int n1=0;      
+      int n2=0;      
+      int n3=0;      
       int n4=0;
+      int n5=0;
+      int n6=0;
       
-    private void pdf(){
+      
+private void pdfproductosmasvendidos() {
+    try {
+        FileOutputStream archivo;
+        File file = new File("src/pdf/productosmasvendidos" + n6 + ".pdf");
+        archivo = new FileOutputStream(file);
+        Document doc = new Document(PageSize.A4, 40, 40, 50, 50);
+        PdfWriter.getInstance(doc, archivo);
+        doc.open();
+
+        // Logo
+        Image logo = Image.getInstance("src/imagenes/INFORMES1_IMG.png"); 
+        logo.scaleToFit(80, 80);
+        logo.setAlignment(Image.ALIGN_LEFT);
+
+        // Fuente general
+        Font fuenteNormal = new Font(Font.TIMES_ROMAN, 11, Font.NORMAL);
+        Font fuenteNegrita = new Font(Font.TIMES_ROMAN, 11, Font.BOLD);
+        Font fuenteTitulo = new Font(Font.TIMES_ROMAN, 16, Font.BOLD, Color.DARK_GRAY);
+
+        // Tabla del encabezado
+        PdfPTable encabezado = new PdfPTable(2);
+        encabezado.setWidthPercentage(100);
+        encabezado.setWidths(new float[]{20, 80});
+
+        PdfPCell celdaLogo = new PdfPCell(logo);
+        celdaLogo.setBorder(0);
+        encabezado.addCell(celdaLogo);
+
+        // Datos empresa
+        PdfPCell celdaDatos = new PdfPCell();
+        celdaDatos.setBorder(0);
+        celdaDatos.addElement(new Paragraph("FARMACIA ESO BRAD", fuenteNegrita));
+        celdaDatos.addElement(new Paragraph("RUC: 212456545", fuenteNormal));
+        celdaDatos.addElement(new Paragraph("Razón Social: Un recuento de nuestrpos numeros en la cantidad, calidad y servivicio de los productos mas vendidos deentro de nuestra farmacia", fuenteNormal));
+        celdaDatos.addElement(new Paragraph("Dirección: Acapulco", fuenteNormal));
+        celdaDatos.addElement(new Paragraph("Teléfono: 7444203005", fuenteNormal));
+        encabezado.addCell(celdaDatos);
+        doc.add(encabezado);
+
+        // Fecha
+        Paragraph fecha = new Paragraph("Fecha de generación: " + new SimpleDateFormat("dd-MM-yyyy").format(new Date()), fuenteNormal);
+        fecha.setAlignment(Element.ALIGN_RIGHT);
+        fecha.setSpacingBefore(10);
+        fecha.setSpacingAfter(10);
+        doc.add(fecha);
+
+        // Título
+        Paragraph titulo = new Paragraph("INFORME DE PRODUCTOS MÁS VENDIDOS", fuenteTitulo);
+        titulo.setAlignment(Element.ALIGN_CENTER);
+        titulo.setSpacingAfter(20);
+        doc.add(titulo);
+
+        // Tabla de productos
+        PdfPTable tabla = new PdfPTable(5);
+        tabla.setWidthPercentage(100);
+        tabla.setWidths(new float[]{8, 20, 40, 15, 17});
+        tabla.setSpacingBefore(10);
+
+        tabla.addCell(new PdfPCell(new Phrase("Nº", fuenteNegrita)));
+        tabla.addCell(new PdfPCell(new Phrase("Código", fuenteNegrita)));
+        tabla.addCell(new PdfPCell(new Phrase("Nombre del producto", fuenteNegrita)));
+        tabla.addCell(new PdfPCell(new Phrase("Cantidad", fuenteNegrita)));
+        tabla.addCell(new PdfPCell(new Phrase("Total vendido", fuenteNegrita)));
+
+        // Datos simulados
+        for (int i = 1; i <= 10; i++) {
+            tabla.addCell(new Phrase(String.valueOf(i), fuenteNormal));
+            tabla.addCell(new Phrase("PROD 00" + i, fuenteNormal));
+            tabla.addCell(new Phrase("Paracetamol 500mg", fuenteNormal));
+            tabla.addCell(new Phrase(String.valueOf(10 * i), fuenteNormal));
+            tabla.addCell(new Phrase("$" + (10 * i * 12), fuenteNormal));
+        }
+
+        doc.add(tabla);
+
+        // Nota de cierre
+        Paragraph nota = new Paragraph("\nEste documento representa un resumen de los productos con mayor rotación según las ventas registradas en el sistema.\n" +
+                                       "Los datos presentados están sujetos a variaciones dependiendo del periodo de corte y actualización de inventario.\n", fuenteNormal);
+        nota.setSpacingBefore(20);
+        doc.add(nota);
+
+        // Firma
+        Paragraph firma = new Paragraph("\n\n_________________________\nGerente de Ventas\nFARMACIA ESO BRAD", fuenteNormal);
+        firma.setAlignment(Element.ALIGN_RIGHT);
+        firma.setSpacingBefore(30);
+        doc.add(firma);
+
+        doc.close();
+        archivo.close();
+
+        JOptionPane.showMessageDialog(this, "Informe generado exitosamente.");
+
+    } catch (DocumentException | FileNotFoundException ex) {
+        JOptionPane.showMessageDialog(this, "Error al generar el documento: " + ex.getMessage());
+    } catch (Exception e) {
+        JOptionPane.showMessageDialog(this, "Error inesperado: " + e.getMessage());
+    }
+}
+
+
+    private void proximosacaducar() {
+    try {
+        FileOutputStream archivo;
+        File file = new File("src/pdf/Proximos_A_Caducar_" + n5 + ".pdf");
+        archivo = new FileOutputStream(file);
+        Document doc = new Document(PageSize.A4, 40, 40, 50, 50);
+        PdfWriter.getInstance(doc, archivo);
+        doc.open();
+
+        // ========== Configuración ==========
+        Image logo = Image.getInstance("src/imagenes/INFORMES1_IMG.png");
+        logo.scaleToFit(80, 80);
+        Font fuenteNormal = new Font(Font.HELVETICA, 10, Font.NORMAL);
+        Font fuenteNegrita = new Font(Font.HELVETICA, 10, Font.BOLD);
+        Font fuenteTitulo = new Font(Font.HELVETICA, 16, Font.BOLD, Color.RED.darker());
+
+        // ========== Encabezado ==========
+        PdfPTable encabezado = new PdfPTable(2);
+        encabezado.setWidthPercentage(100);
+        encabezado.setWidths(new float[]{20, 80});
+
+        PdfPCell celdaImg = new PdfPCell(logo);
+        celdaImg.setBorder(0);
+        encabezado.addCell(celdaImg);
+
+        PdfPCell info = new PdfPCell();
+        info.setBorder(0);
+        info.addElement(new Paragraph("FARMACIA ESO BRAD", fuenteNegrita));
+        info.addElement(new Paragraph("RUC: 212456545", fuenteNormal));
+        info.addElement(new Paragraph("Dirección: Acapulco, Guerrero", fuenteNormal));
+        info.addElement(new Paragraph("Tel: 7444203005", fuenteNormal));
+        info.addElement(new Paragraph("Fecha: " + new SimpleDateFormat("dd/MM/yyyy").format(new Date()), fuenteNormal));
+        encabezado.addCell(info);
+
+        doc.add(encabezado);
+
+        // ========== Título ==========
+        Paragraph titulo = new Paragraph("\nREPORTE DE PRODUCTOS PRÓXIMOS A CADUCAR", fuenteTitulo);
+        titulo.setAlignment(Element.ALIGN_CENTER);
+        titulo.setSpacingAfter(20);
+        doc.add(titulo);
+
+        // ========== Tabla ==========
+        PdfPTable tabla = new PdfPTable(7);
+        tabla.setWidthPercentage(100);
+        tabla.setWidths(new float[]{5, 15, 25, 15, 10, 15, 15});
+
+        String[] columnas = {"#", "Código", "Nombre", "Presentación", "Stock", "Fecha Caducidad", "Días Restantes"};
+        for (String col : columnas) {
+            PdfPCell header = new PdfPCell(new Phrase(col, fuenteNegrita));
+            header.setBackgroundColor(Color.LIGHT_GRAY);
+            header.setHorizontalAlignment(Element.ALIGN_CENTER);
+            tabla.addCell(header);
+        }
+
+        // ========== Simulación de productos próximos a caducar ==========
+        SimpleDateFormat sdf = new SimpleDateFormat("dd/MM/yyyy");
+        Calendar cal = Calendar.getInstance();
+        Date hoy = new Date();
+
+       
+for (int i = 1; i <= 10; i++) {
+    cal.setTime(hoy);
+    cal.add(Calendar.DAY_OF_YEAR, i * 3);
+    Date fechaCaducidad = cal.getTime();
+    long diasRestantes = (fechaCaducidad.getTime() - hoy.getTime()) / (1000 * 60 * 60 * 24);
+
+    Color colorFila = diasRestantes < 15 ? Color.PINK : Color.WHITE;
+
+    PdfPCell celda1 = new PdfPCell(new Phrase(String.valueOf(i), fuenteNormal));
+    celda1.setBackgroundColor(colorFila);
+    tabla.addCell(celda1);
+
+    PdfPCell celda2 = new PdfPCell(new Phrase("COD-00" + i, fuenteNormal));
+    celda2.setBackgroundColor(colorFila);
+    tabla.addCell(celda2);
+
+    PdfPCell celda3 = new PdfPCell(new Phrase("Producto Ejemplo " + i, fuenteNormal));
+    celda3.setBackgroundColor(colorFila);
+    tabla.addCell(celda3);
+
+    PdfPCell celda4 = new PdfPCell(new Phrase("Caja x 10", fuenteNormal));
+    celda4.setBackgroundColor(colorFila);
+    tabla.addCell(celda4);
+
+    PdfPCell celda5 = new PdfPCell(new Phrase(String.valueOf(10 + i), fuenteNormal));
+    celda5.setBackgroundColor(colorFila);
+    tabla.addCell(celda5);
+
+    PdfPCell celda6 = new PdfPCell(new Phrase(sdf.format(fechaCaducidad), fuenteNormal));
+    celda6.setBackgroundColor(colorFila);
+    tabla.addCell(celda6);
+
+    PdfPCell celda7 = new PdfPCell(new Phrase(String.valueOf(diasRestantes), fuenteNormal));
+    celda7.setBackgroundColor(colorFila);
+    tabla.addCell(celda7);
+
+
+        }
+
+        doc.add(tabla);
+
+        // ========== Observaciones ==========
+        Paragraph observacion = new Paragraph("\nObservaciones:", fuenteNegrita);
+        observacion.setSpacingBefore(15);
+        doc.add(observacion);
+
+        Paragraph textoObs = new Paragraph(
+            "Los productos listados tienen una fecha de caducidad próxima.\n" +
+            "Se recomienda aplicar acciones preventivas: descuentos, promociones, devoluciones o retiro del inventario.",
+            fuenteNormal);
+        textoObs.setSpacingAfter(15);
+        doc.add(textoObs);
+
+        // ========== Firma ==========
+        Paragraph firma = new Paragraph("\n\n_________________________\nResponsable de Almacén\nFARMACIA ESO BRAD", fuenteNormal);
+        firma.setAlignment(Element.ALIGN_RIGHT);
+        doc.add(firma);
+
+        doc.close();
+        archivo.close();
+
+        JOptionPane.showMessageDialog(this, "📄 Reporte generado correctamente.");
+
+    } catch (Exception e) {
+        JOptionPane.showMessageDialog(this, "❌ Error al generar el reporte: " + e.getMessage());
+    }
+}
+
+      
+private void pdfinventarioactual() {
+    try {
+        FileOutputStream archivo;
+        File file = new File("src/pdf/inventarioactual" + n4 + ".pdf");
+        archivo = new FileOutputStream(file);
+        Document doc = new Document();
+        PdfWriter.getInstance(doc, archivo);
+        doc.open();
+
+        // Logo
+        Image img = Image.getInstance("src/imagenes/INFORMES1_IMG.png");
+        img.scaleToFit(80, 80);
+        img.setAlignment(Image.ALIGN_LEFT);
+
+        // Fuentes
+        Font tituloFont = new Font(Font.HELVETICA, 16, Font.BOLD, Color.BLUE);
+        Font negrita = new Font(Font.HELVETICA, 12, Font.BOLD);
+        Font fuenteNormal = new Font(Font.HELVETICA, 10, Font.NORMAL);
+
+        // Fecha actual
+        Date date = new Date();
+        SimpleDateFormat sdf = new SimpleDateFormat("dd-MM-yyyy");
+        String fechaActual = sdf.format(date);
+
+        // Encabezado
+        PdfPTable encabezado = new PdfPTable(2);
+        encabezado.setWidthPercentage(100);
+        encabezado.setWidths(new float[]{20, 80});
+        encabezado.getDefaultCell().setBorder(0);
+
+        PdfPCell celdaImg = new PdfPCell(img);
+        celdaImg.setBorder(0);
+        encabezado.addCell(celdaImg);
+
+        PdfPCell datosFarmacia = new PdfPCell(new Phrase(
+            "FARMACIA ESO BRAD\n" +
+            "RUC: 212456545\n" +
+            "Teléfono: 7444203005\n" +
+            "Dirección: Acapulco\n" +
+            "Razón Social: jija\n", fuenteNormal));
+        datosFarmacia.setBorder(0);
+        encabezado.addCell(datosFarmacia);
+
+        doc.add(encabezado);
+        doc.add(new Paragraph("\n"));
+
+        // Título
+        Paragraph titulo = new Paragraph("REPORTE DE INVENTARIO ACTUAL", tituloFont);
+        titulo.setAlignment(Element.ALIGN_CENTER);
+        doc.add(titulo);
+
+        Paragraph fecha = new Paragraph("Fecha de emisión: " + fechaActual + "\n\n", fuenteNormal);
+        fecha.setAlignment(Element.ALIGN_RIGHT);
+        doc.add(fecha);
+
+        // Tabla PDF
+        PdfPTable tabla = new PdfPTable(6);
+        tabla.setWidthPercentage(100);
+        tabla.setWidths(new float[]{12, 25, 20, 10, 20, 13});
+
+        // Encabezados
+        String[] columnas = {"Código", "Nombre", "Presentación", "Stock", "Fecha Caducidad", "Días Restantes"};
+        for (String col : columnas) {
+            PdfPCell header = new PdfPCell(new Phrase(col, negrita));
+            header.setBackgroundColor(Color.LIGHT_GRAY);
+            header.setHorizontalAlignment(Element.ALIGN_CENTER);
+            tabla.addCell(header);
+        }
+
+        // Obtener datos desde productos
         try {
-            
-          
-            
-            FileOutputStream archivo;
-            File file = new File("src/pdf/Venta"+n+".pdf");
-            archivo = new FileOutputStream(file);
-            Document doc = new Document();
-            PdfWriter.getInstance(doc, archivo);
-            doc.open();
-            Image img = Image.getInstance("src/imagenes/soporte.jpg");
-            Paragraph fecha = new Paragraph();
-            Font negrita = new Font(Font.TIMES_ROMAN, 12, Font.BOLD,Color.BLUE);
-            fecha.add(Chunk.NEWLINE);
-            Date date = new Date();
-            fecha.add("Factura: 1\n"+"Fecha: "+new SimpleDateFormat("DD-MM-YYYY".formatted(date)+"\n\n"));
-            
-            PdfPTable Encabezado = new PdfPTable(4);
-            Encabezado.setWidthPercentage(100);
-            Encabezado.getDefaultCell().setBorder(0);
-            float[] ColumnaEncabezado = new float[]{20f, 30f, 70f, 40f};
-            Encabezado.setWidths(ColumnaEncabezado);
-             Encabezado.setHorizontalAlignment(Element.ALIGN_LEFT);
-            
-             Encabezado.addCell(img);
-             String roo = "212456545";
-             String nom = "REPORTE DE VENTA";
-             String tel = "7444203005";
-             String dir = "Acapulco";
-             String ra = "jija";
-             
-            Encabezado.addCell("");
-            Encabezado.addCell("Ruc: "+roo+ "\nNombre: "+nom+"\nTelefono: "+tel+ "\n direccion: "+dir+"\nRazon: "+ra);
-            Encabezado.addCell(fecha);
-            doc.add(Encabezado);
-          
-            
-            doc.close();
-            archivo.close();
-            
-            JOptionPane.showMessageDialog(this, "se genero el documento: ");
-            
+            Connection con = Conexion.conectar();
+            String sql = "SELECT codigo_barras, nombre, descripcion, stock, fecha_caducidad, " +
+                         "DATEDIFF(fecha_caducidad, CURDATE()) AS dias_restantes " +
+                         "FROM productos";
+            PreparedStatement ps = con.prepareStatement(sql);
+            ResultSet rs = ps.executeQuery();
+
+            while (rs.next()) {
+                String codigo = rs.getString("codigo_barras");
+                String nombre = rs.getString("nombre");
+                String descripcion = rs.getString("descripcion");
+                int stock = rs.getInt("stock");
+                Date fechaCad = rs.getDate("fecha_caducidad");
+                int diasRestantes = rs.getInt("dias_restantes");
+
+                // Color condicional
+                Color bgColor = null;
+                if (diasRestantes < 0) {
+                    bgColor = new Color(255, 102, 102); // Rojo fuerte
+                } else if (diasRestantes <= 7) {
+                    bgColor = new Color(255, 204, 204); // Rojo claro
+                } else if (diasRestantes <= 30) {
+                    bgColor = new Color(255, 255, 153); // Amarillo
+                }
+
+                PdfPCell[] celdas = new PdfPCell[]{
+                    new PdfPCell(new Phrase(codigo, fuenteNormal)),
+                    new PdfPCell(new Phrase(nombre, fuenteNormal)),
+                    new PdfPCell(new Phrase(descripcion, fuenteNormal)),
+                    new PdfPCell(new Phrase(String.valueOf(stock), fuenteNormal)),
+                    new PdfPCell(new Phrase(new SimpleDateFormat("dd-MM-yyyy").format(fechaCad), fuenteNormal)),
+                    new PdfPCell(new Phrase(String.valueOf(diasRestantes), fuenteNormal))
+                };
+
+                for (PdfPCell celda : celdas) {
+                    celda.setHorizontalAlignment(Element.ALIGN_CENTER);
+                    if (bgColor != null) celda.setBackgroundColor(bgColor);
+                    tabla.addCell(celda);
+                }
+            }
+
+            rs.close();
+            ps.close();
+            con.close();
+        } catch (SQLException ex) {
+            JOptionPane.showMessageDialog(this, "Error al obtener datos: " + ex.getMessage());
         }
-                     catch (DocumentException | FileNotFoundException ex) {
-                        JOptionPane.showMessageDialog(this, "Error al generar el documento: "+ ex.getMessage());
-                     }
-          
-        catch (Exception e) {
+
+        doc.add(tabla);
+        doc.close();
+        archivo.close();
+        JOptionPane.showMessageDialog(this, "¡Documento generado correctamente!");
+
+    } catch (DocumentException | IOException ex) {
+        JOptionPane.showMessageDialog(this, "Error al generar PDF: " + ex.getMessage());
+    } catch (Exception e) {
+        JOptionPane.showMessageDialog(this, "Error inesperado: " + e.getMessage());
+    }
+}
+
+    
+    private void pdf() {
+    try {
+        FileOutputStream archivo;
+        File file = new File("src/pdf/Venta" + n + ".pdf");
+        archivo = new FileOutputStream(file);
+        Document doc = new Document();
+        PdfWriter.getInstance(doc, archivo);
+        doc.open();
+
+        // Imagen/logo
+        Image img = Image.getInstance("src/imagenes/INFORMES1_IMG.png");
+        img.scaleToFit(80, 80);
+        img.setAlignment(Image.ALIGN_LEFT);
+
+        // Fuentes
+        Font tituloFont = new Font(Font.HELVETICA, 16, Font.BOLD, Color.BLUE);
+        Font negrita = new Font(Font.HELVETICA, 12, Font.BOLD);
+        Font fuenteNormal = new Font(Font.HELVETICA, 10, Font.NORMAL);
+
+        // Fecha actual
+        Date date = new Date();
+        SimpleDateFormat sdf = new SimpleDateFormat("dd-MM-yyyy");
+        String fechaActual = sdf.format(date);
+
+        // Encabezado
+        PdfPTable encabezado = new PdfPTable(2);
+        encabezado.setWidthPercentage(100);
+        encabezado.setWidths(new float[]{20, 80});
+        encabezado.getDefaultCell().setBorder(0);
+
+        PdfPCell celdaImg = new PdfPCell(img);
+        celdaImg.setBorder(0);
+        encabezado.addCell(celdaImg);
+
+        PdfPCell datosFarmacia = new PdfPCell(new Phrase(
+            "FARMACIA ESO BRAD\n" +
+            "RUC: 212456545\n" +
+            "Teléfono: 7444203005\n" +
+            "Dirección: Acapulco, Guerrero\n" +
+            "Razón Social: ESO BRAD FARMACÉUTICOS S.A. de C.V.\n", fuenteNormal));
+        datosFarmacia.setBorder(0);
+        encabezado.addCell(datosFarmacia);
+
+        doc.add(encabezado);
+        doc.add(new Paragraph("\n"));
+
+        // Título del reporte
+        Paragraph titulo = new Paragraph("REPORTE DE VENTAS", tituloFont);
+        titulo.setAlignment(Element.ALIGN_CENTER);
+        doc.add(titulo);
+
+        // Fecha
+        Paragraph fecha = new Paragraph("Fecha de emisión: " + fechaActual + "\n\n", fuenteNormal);
+        fecha.setAlignment(Element.ALIGN_RIGHT);
+        doc.add(fecha);
+
+        // Tabla de ventas
+        PdfPTable tabla = new PdfPTable(5);
+        tabla.setWidthPercentage(100);
+        tabla.setWidths(new float[]{15, 35, 15, 15, 20});
+
+        String[] columnas = {"Código", "Producto", "Cantidad", "P. Unitario", "Total"};
+        for (String col : columnas) {
+            PdfPCell header = new PdfPCell(new Phrase(col, negrita));
+            header.setBackgroundColor(Color.LIGHT_GRAY);
+            header.setHorizontalAlignment(Element.ALIGN_CENTER);
+            tabla.addCell(header);
         }
+
+        // Datos de ejemplo (puedes reemplazarlo con tu lógica real de ventas)
+        for (int i = 1; i <= 10; i++) {
+            int cantidad = 2 + i;
+            double precio = 12.50 + i;
+            double total = cantidad * precio;
+
+            tabla.addCell(new Phrase("VEN-00" + i, fuenteNormal));
+            tabla.addCell(new Phrase("Medicamento " + i, fuenteNormal));
+            tabla.addCell(new Phrase(String.valueOf(cantidad), fuenteNormal));
+            tabla.addCell(new Phrase("$" + String.format("%.2f", precio), fuenteNormal));
+            tabla.addCell(new Phrase("$" + String.format("%.2f", total), fuenteNormal));
+        }
+
+        doc.add(tabla);
+
+        doc.close();
+        archivo.close();
+
+        JOptionPane.showMessageDialog(this, "¡Reporte de ventas generado correctamente!");
+
+    } catch (DocumentException | IOException ex) {
+        JOptionPane.showMessageDialog(this, "Error al generar el documento: " + ex.getMessage());
+    } catch (Exception e) {
+        JOptionPane.showMessageDialog(this, "Error inesperado: " + e.getMessage());
+    }
+}
+
+
     
     
-}
     
-private void pdfcorte(){
-        try {
-            
-         
-            
-            FileOutputStream archivo;
-            File file = new File("src/pdf/Corte"+n1+".pdf");
-            archivo = new FileOutputStream(file);
-            Document doc = new Document();
-            PdfWriter.getInstance(doc, archivo);
-            doc.open();
-            Image img = Image.getInstance("src/imagenes/soporte.jpg");
-            Paragraph fecha = new Paragraph();
-            Font negrita = new Font(Font.TIMES_ROMAN, 12, Font.BOLD,Color.BLUE);
-            fecha.add(Chunk.NEWLINE);
-            Date date= new Date();
-            
-            
-            fecha.add("factura: 1\n"+"Fecha: "+new SimpleDateFormat("DD-MM-YYYY".formatted(date)+"\n\n"));
-            
-            PdfPTable Encabezado = new PdfPTable(4);
-            Encabezado.setWidthPercentage(100);
-            Encabezado.getDefaultCell().setBorder(0);
-            float[] ColumnaEncabezado = new float[]{20f, 30f, 70f, 40f};
-            Encabezado.setWidths(ColumnaEncabezado);
-             Encabezado.setHorizontalAlignment(Element.ALIGN_LEFT);
-            
-             Encabezado.addCell(img);
-             String roo = "212456545";
-             String nom = "FARMACIA POCHOCO";
-             String tel = "7444203005";
-             String dir = "Acapulco";
-             String ra = "jija";
-             String p = "s.v de SA";
-                   
-             
-             Encabezado.addCell("");
-             Encabezado.addCell("Ruc: "+roo+ "\nNombre: "+nom+"\nTelefono: "+tel+ "\n direccion: "+dir+"\nRazon: "+ra);
-            Encabezado.addCell(fecha);
-            doc.add(Encabezado);
-             
-            
-            
-            doc.close();
-            archivo.close();
-            
-            JOptionPane.showMessageDialog(this, "se genero el documento: ");
-            
-        }
-                     catch (DocumentException | FileNotFoundException ex) {
-                        JOptionPane.showMessageDialog(this, "Error al generar el documento: "+ ex.getMessage());
-                     }
-          
-        catch (Exception e) {
-        }
-}
+private void pdfcorte() {
+    try {
+        FileOutputStream archivo;
+        File file = new File("src/pdf/Corte" + n1 + ".pdf");
+        archivo = new FileOutputStream(file);
+        Document doc = new Document(PageSize.A4);
+        PdfWriter.getInstance(doc, archivo);
+        doc.open();
 
-private void pdfcortegeneral(){
-        try {
-            
-         
-            
-            FileOutputStream archivo;
-            File file = new File("src/pdf/cortegeneral"+n2+".pdf");
-            archivo = new FileOutputStream(file);
-            Document doc = new Document();
-            PdfWriter.getInstance(doc, archivo);
-            doc.open();
-            Image img = Image.getInstance("src/imagenes/soporte.jpg");
-            Paragraph fecha = new Paragraph();
-            Font negrita = new Font(Font.TIMES_ROMAN, 12, Font.BOLD,Color.BLUE);
-            fecha.add(Chunk.NEWLINE);
-            Date date= new Date();
-            
-            
-            fecha.add("factura: 1\n"+"Fecha: "+new SimpleDateFormat("DD-MM-YYYY".formatted(date)+"\n\n"));
-            
-            PdfPTable Encabezado = new PdfPTable(4);
-            Encabezado.setWidthPercentage(100);
-            Encabezado.getDefaultCell().setBorder(0);
-            float[] ColumnaEncabezado = new float[]{20f, 30f, 70f, 40f};
-            Encabezado.setWidths(ColumnaEncabezado);
-             Encabezado.setHorizontalAlignment(Element.ALIGN_LEFT);
-            
-             Encabezado.addCell(img);
-             String roo = "212456545";
-             String nom = "CORTE GENERAL";
-             String tel = "7444203005";
-             String dir = "Acapulco";
-             String ra = "jija";
-             String p = "s.v de SA";
-                   
-             
-             Encabezado.addCell("");
-             Encabezado.addCell("Ruc: "+roo+ "\nNombre: "+nom+"\nTelefono: "+tel+ "\n direccion: "+dir+"\nRazon: "+ra);
-            Encabezado.addCell(fecha);
-            doc.add(Encabezado);
-             
-            
-            
-            doc.close();
-            archivo.close();
-            
-            JOptionPane.showMessageDialog(this, "se genero el documento: ");
-            
-        }
-                     catch (DocumentException | FileNotFoundException ex) {
-                        JOptionPane.showMessageDialog(this, "Error al generar el documento: "+ ex.getMessage());
-                     }
-          
-        catch (Exception e) {
-        }
-}
+        // Logo
+        Image img = Image.getInstance("src/imagenes/INFORMES1_IMG.png");
+        img.scaleToFit(80, 80);
+        img.setAlignment(Image.ALIGN_LEFT);
 
+        // Fuentes
+        Font fuenteTitulo = new Font(Font.HELVETICA, 16, Font.BOLD, Color.BLUE);
+        Font fuenteNegrita = new Font(Font.HELVETICA, 12, Font.BOLD);
+        Font fuenteNormal = new Font(Font.HELVETICA, 10, Font.NORMAL);
 
-private void pdfdevolucionescalcelaciones(){
-        try {
-            
-         
-            
-            FileOutputStream archivo;
-            File file = new File("src/pdf/devolucionescalcelaciones"+n3+".pdf");
-            archivo = new FileOutputStream(file);
-            Document doc = new Document();
-            PdfWriter.getInstance(doc, archivo);
-            doc.open();
-            Image img = Image.getInstance("src/imagenes/soporte.jpg");
-            Paragraph fecha = new Paragraph();
-            Font negrita = new Font(Font.TIMES_ROMAN, 12, Font.BOLD,Color.BLUE);
-            fecha.add(Chunk.NEWLINE);
-            Date date= new Date();
-            
-            
-            fecha.add("factura: 1\n"+"Fecha: "+new SimpleDateFormat("DD-MM-YYYY".formatted(date)+"\n\n"));
-            
-            PdfPTable Encabezado = new PdfPTable(4);
-            Encabezado.setWidthPercentage(100);
-            Encabezado.getDefaultCell().setBorder(0);
-            float[] ColumnaEncabezado = new float[]{20f, 30f, 70f, 40f};
-            Encabezado.setWidths(ColumnaEncabezado);
-             Encabezado.setHorizontalAlignment(Element.ALIGN_LEFT);
-            
-             Encabezado.addCell(img);
-             String roo = "212456545";
-             String nom = "DEVOLUCIONES Y CALCELACIONES";
-             String tel = "7444203005";
-             String dir = "Acapulco";
-             String ra = "jija";
-             String p = "s.v de SA";
-                   
-             
-             Encabezado.addCell("");
-             Encabezado.addCell("Ruc: "+roo+ "\nNombre: "+nom+"\nTelefono: "+tel+ "\n direccion: "+dir+"\nRazon: "+ra);
-            Encabezado.addCell(fecha);
-            doc.add(Encabezado);
-             
-            
-            
-            doc.close();
-            archivo.close();
-            
-            JOptionPane.showMessageDialog(this, "se genero el documento: ");
-            
-        }
-                     catch (DocumentException | FileNotFoundException ex) {
-                        JOptionPane.showMessageDialog(this, "Error al generar el documento: "+ ex.getMessage());
-                     }
-          
-        catch (Exception e) {
-        }
-}
+        // Fecha actual
+        Date date = new Date();
+        SimpleDateFormat sdf = new SimpleDateFormat("dd-MM-yyyy");
+        String fechaFormateada = sdf.format(date);
 
+        // Encabezado
+        PdfPTable encabezado = new PdfPTable(2);
+        encabezado.setWidthPercentage(100);
+        encabezado.setWidths(new float[]{20, 80});
+        encabezado.getDefaultCell().setBorder(0);
+
+        PdfPCell celdaLogo = new PdfPCell(img);
+        celdaLogo.setBorder(0);
+        encabezado.addCell(celdaLogo);
+
+        PdfPCell datosFarmacia = new PdfPCell(new Phrase(
+            "FARMACIA ESO BRAD\n" +
+            "RUC: 212456545\n" +
+            "Teléfono: 7444203005\n" +
+            "Dirección: Acapulco, Guerrero\n" +
+            "Razón Social: ESO BRAD FARMACÉUTICOS S.A. de C.V.", fuenteNormal));
+        datosFarmacia.setBorder(0);
+        encabezado.addCell(datosFarmacia);
+        doc.add(encabezado);
+
+        doc.add(new Paragraph("\n"));
+
+        // Título
+        Paragraph titulo = new Paragraph("CORTE DE CAJA - REPORTE DEL DÍA", fuenteTitulo);
+        titulo.setAlignment(Element.ALIGN_CENTER);
+        doc.add(titulo);
+
+        doc.add(new Paragraph("Fecha de corte: " + fechaFormateada + "\n\n", fuenteNormal));
+
+        // Tabla de operaciones
+        PdfPTable tabla = new PdfPTable(4);
+        tabla.setWidthPercentage(100);
+        tabla.setWidths(new float[]{20, 30, 30, 20});
+        tabla.setSpacingBefore(10f);
+        tabla.setSpacingAfter(10f);
+
+        // Encabezados
+        String[] columnas = {"Hora", "Operación", "Descripción", "Monto"};
+        for (String col : columnas) {
+            PdfPCell header = new PdfPCell(new Phrase(col, fuenteNegrita));
+            header.setBackgroundColor(Color.LIGHT_GRAY);
+            header.setHorizontalAlignment(Element.ALIGN_CENTER);
+            tabla.addCell(header);
+        }
+
+        // Datos de ejemplo (puedes reemplazar esto con datos reales desde SQL o JTable)
+        String[] horas = {"08:00", "09:30", "11:00", "13:15", "15:40"};
+        String[] tipos = {"Apertura", "Venta", "Egreso", "Venta", "Cierre"};
+        String[] descripciones = {
+            "Inicio de caja del día",
+            "Venta de medicamentos generales",
+            "Pago de proveedor",
+            "Venta de urgencia",
+            "Cierre de caja"
+        };
+        double[] montos = {500.00, 280.00, -150.00, 320.00, 0.00};
+
+        double ingresos = 0;
+        double egresos = 0;
+
+        for (int i = 0; i < horas.length; i++) {
+            tabla.addCell(new Phrase(horas[i], fuenteNormal));
+            tabla.addCell(new Phrase(tipos[i], fuenteNormal));
+            tabla.addCell(new Phrase(descripciones[i], fuenteNormal));
+            tabla.addCell(new Phrase("$" + String.format("%.2f", montos[i]), fuenteNormal));
+
+            if (montos[i] > 0) ingresos += montos[i];
+            if (montos[i] < 0) egresos += montos[i];
+        }
+
+        doc.add(tabla);
+
+        // Totales
+        Paragraph totales = new Paragraph();
+        totales.setAlignment(Element.ALIGN_RIGHT);
+        totales.setFont(fuenteNegrita);
+        totales.add("Total Ingresos: $" + String.format("%.2f", ingresos) + "\n");
+        totales.add("Total Egresos: $" + String.format("%.2f", Math.abs(egresos)) + "\n");
+        totales.add("Balance del Día: $" + String.format("%.2f", ingresos + egresos) + "\n");
+        doc.add(totales);
+
+        doc.add(new Paragraph("\n\n"));
+
+        // Observaciones
+        Paragraph observaciones = new Paragraph("Observaciones: ____________________________________________\n\n", fuenteNormal);
+        doc.add(observaciones);
+
+        // Firma
+        Paragraph firma = new Paragraph("Firma Responsable: _______________________________", fuenteNormal);
+        firma.setAlignment(Element.ALIGN_RIGHT);
+        doc.add(firma);
+
+        doc.close();
+        archivo.close();
+        JOptionPane.showMessageDialog(this, "Corte de caja generado exitosamente.");
+
+    } catch (DocumentException | IOException ex) {
+        JOptionPane.showMessageDialog(this, "Error al generar el documento: " + ex.getMessage());
+    } catch (Exception e) {
+        JOptionPane.showMessageDialog(this, "Error inesperado: " + e.getMessage());
+    }
 }
 
 
->>>>>>> fcee56b (Actualizado)
+private void pdfcortegeneral() {
+    try {
+        FileOutputStream archivo;
+        File file = new File("src/pdf/cortegeneral" + n2 + ".pdf");
+        archivo = new FileOutputStream(file);
+        Document doc = new Document(PageSize.A4);
+        PdfWriter.getInstance(doc, archivo);
+        doc.open();
+
+        // Imagen (logo)
+        Image img = Image.getInstance("src/imagenes/INFORMES1_IMG.png");
+        img.scaleToFit(80, 80);
+        img.setAlignment(Image.ALIGN_LEFT);
+
+        // Fuentes
+        Font fuenteTitulo = new Font(Font.HELVETICA, 16, Font.BOLD, Color.BLUE);
+        Font fuenteNegrita = new Font(Font.HELVETICA, 12, Font.BOLD);
+        Font fuenteNormal = new Font(Font.HELVETICA, 10, Font.NORMAL);
+
+        // Fecha actual
+        Date date = new Date();
+        SimpleDateFormat sdf = new SimpleDateFormat("dd-MM-yyyy");
+        String fechaFormateada = sdf.format(date);
+
+        // Encabezado
+        PdfPTable encabezado = new PdfPTable(2);
+        encabezado.setWidthPercentage(100);
+        encabezado.setWidths(new float[]{20, 80});
+        encabezado.getDefaultCell().setBorder(0);
+
+        PdfPCell logoCell = new PdfPCell(img);
+        logoCell.setBorder(0);
+        encabezado.addCell(logoCell);
+
+        PdfPCell infoEmpresa = new PdfPCell(new Phrase(
+            "FARMACIA ESO BRAD\n" +
+            "RUC: 212456545\n" +
+            "Teléfono: 7444203005\n" +
+            "Dirección: Acapulco, Guerrero\n" +
+            "Razón Social: ESO BRAD FARMACÉUTICOS S.A. de C.V.", fuenteNormal));
+        infoEmpresa.setBorder(0);
+        encabezado.addCell(infoEmpresa);
+
+        doc.add(encabezado);
+        doc.add(new Paragraph("\n"));
+
+        // Título
+        Paragraph titulo = new Paragraph("REPORTE GENERAL DE CORTE", fuenteTitulo);
+        titulo.setAlignment(Element.ALIGN_CENTER);
+        doc.add(titulo);
+
+        doc.add(new Paragraph("Fecha de generación: " + fechaFormateada + "\n\n", fuenteNormal));
+
+        // Tabla resumen general
+        PdfPTable tabla = new PdfPTable(4);
+        tabla.setWidthPercentage(100);
+        tabla.setWidths(new float[]{25, 35, 25, 15});
+        tabla.setSpacingBefore(10f);
+        tabla.setSpacingAfter(10f);
+
+        String[] encabezados = {"Sucursal", "Descripción", "Tipo", "Monto"};
+        for (String encabezadoTexto : encabezados) {
+            PdfPCell header = new PdfPCell(new Phrase(encabezadoTexto, fuenteNegrita));
+            header.setBackgroundColor(Color.LIGHT_GRAY);
+            header.setHorizontalAlignment(Element.ALIGN_CENTER);
+            tabla.addCell(header);
+        }
+
+        // Datos de ejemplo
+        String[] sucursales = {"Sucursal A", "Sucursal B", "Sucursal A", "Sucursal C", "Sucursal B"};
+        String[] descripciones = {
+            "Ventas del turno matutino", 
+            "Egreso por mantenimiento", 
+            "Ventas del turno vespertino",
+            "Compra de insumos", 
+            "Cierre de caja"
+        };
+        String[] tipos = {"Ingreso", "Egreso", "Ingreso", "Egreso", "Ingreso"};
+        double[] montos = {1500.00, -300.00, 1800.00, -250.00, 500.00};
+
+        double totalIngresos = 0;
+        double totalEgresos = 0;
+
+        for (int i = 0; i < sucursales.length; i++) {
+            tabla.addCell(new Phrase(sucursales[i], fuenteNormal));
+            tabla.addCell(new Phrase(descripciones[i], fuenteNormal));
+            tabla.addCell(new Phrase(tipos[i], fuenteNormal));
+
+            String montoTexto = "$" + String.format("%.2f", Math.abs(montos[i]));
+            PdfPCell montoCell = new PdfPCell(new Phrase(montoTexto, fuenteNormal));
+            montoCell.setHorizontalAlignment(Element.ALIGN_RIGHT);
+            tabla.addCell(montoCell);
+
+            if (montos[i] > 0) totalIngresos += montos[i];
+            else totalEgresos += Math.abs(montos[i]);
+        }
+
+        doc.add(tabla);
+
+        // Totales finales
+        Paragraph resumen = new Paragraph();
+        resumen.setAlignment(Element.ALIGN_RIGHT);
+        resumen.setFont(fuenteNegrita);
+        resumen.add("Total Ingresos: $" + String.format("%.2f", totalIngresos) + "\n");
+        resumen.add("Total Egresos: $" + String.format("%.2f", totalEgresos) + "\n");
+        resumen.add("Balance Neto: $" + String.format("%.2f", totalIngresos - totalEgresos) + "\n");
+        doc.add(resumen);
+
+        doc.add(new Paragraph("\n\n"));
+
+        // Observaciones y firma
+        doc.add(new Paragraph("Observaciones Generales: _________________________________________________\n\n", fuenteNormal));
+        doc.add(new Paragraph("Firma Responsable: _________________________________________", fuenteNormal));
+
+        doc.close();
+        archivo.close();
+        JOptionPane.showMessageDialog(this, "Corte general generado exitosamente.");
+    } catch (DocumentException | IOException ex) {
+        JOptionPane.showMessageDialog(this, "Error al generar el documento: " + ex.getMessage());
+    } catch (Exception e) {
+        JOptionPane.showMessageDialog(this, "Error inesperado: " + e.getMessage());
+    }
+}
+
+
+private void pdfdevoluciones() {
+    try {
+        FileOutputStream archivo;
+        File file = new File("src/pdf/devoluciones_cancelaciones" + n3 + ".pdf");
+        archivo = new FileOutputStream(file);
+        Document doc = new Document(PageSize.A4);
+        PdfWriter.getInstance(doc, archivo);
+        doc.open();
+
+        // Logo
+        Image img = Image.getInstance("src/imagenes/INFORMES1_IMG.png");
+        img.scaleToFit(70, 70);
+        img.setAlignment(Image.ALIGN_LEFT);
+
+        // Fuentes
+        Font fuenteTitulo = new Font(Font.HELVETICA, 16, Font.BOLD, Color.BLUE);
+        Font fuenteSubtitulo = new Font(Font.HELVETICA, 12, Font.BOLDITALIC);
+        Font fuenteNegrita = new Font(Font.HELVETICA, 11, Font.BOLD);
+        Font fuenteNormal = new Font(Font.HELVETICA, 10);
+
+        // Fecha
+        Date fechaActual = new Date();
+        SimpleDateFormat sdf = new SimpleDateFormat("dd-MM-yyyy");
+
+        // Encabezado con logo y datos empresa
+        PdfPTable encabezado = new PdfPTable(2);
+        encabezado.setWidthPercentage(100);
+        encabezado.setWidths(new float[]{15, 85});
+        encabezado.getDefaultCell().setBorder(0);
+
+        PdfPCell logoCell = new PdfPCell(img);
+        logoCell.setBorder(0);
+        encabezado.addCell(logoCell);
+
+        PdfPCell datosEmpresa = new PdfPCell(new Phrase(
+            "FARMACIA ESO BRAD\n" +
+            "RUC: 212456545\n" +
+            "Tel: 7444203005\n" +
+            "Dirección: Acapulco, Guerrero\n" +
+            "Razón Social: ESO BRAD FARMACÉUTICOS S.A. de C.V.", fuenteNormal));
+        datosEmpresa.setBorder(0);
+        encabezado.addCell(datosEmpresa);
+        doc.add(encabezado);
+
+        doc.add(Chunk.NEWLINE);
+
+        // Título
+        Paragraph titulo = new Paragraph("REPORTE DE DEVOLUCIONES Y CANCELACIONES", fuenteTitulo);
+        titulo.setAlignment(Element.ALIGN_CENTER);
+        doc.add(titulo);
+
+        Paragraph subtitulo = new Paragraph("Documento que muestra las operaciones registradas como devoluciones o cancelaciones.", fuenteSubtitulo);
+        subtitulo.setAlignment(Element.ALIGN_CENTER);
+        doc.add(subtitulo);
+
+        doc.add(new Paragraph("\nFecha de emisión: " + sdf.format(fechaActual) + "\n\n", fuenteNormal));
+
+        // Tabla de contenido
+        PdfPTable tabla = new PdfPTable(6);
+        tabla.setWidthPercentage(100);
+        tabla.setWidths(new float[]{10, 25, 15, 10, 25, 15});
+        tabla.setSpacingBefore(10);
+
+        String[] columnas = {"ID", "Producto", "Tipo", "Cant.", "Motivo", "Fecha"};
+        for (String col : columnas) {
+            PdfPCell header = new PdfPCell(new Phrase(col, fuenteNegrita));
+            header.setHorizontalAlignment(Element.ALIGN_CENTER);
+            header.setBackgroundColor(new Color(230, 230, 250));
+            tabla.addCell(header);
+        }
+
+        // Datos simulados (puedes reemplazarlos con datos reales desde JTable o BD)
+        Object[][] registros = {
+            {"001", "Diclofenaco 75mg", "Devolución", "2", "Medicamento vencido", "24-05-2025"},
+            {"002", "Ibuprofeno 400mg", "Cancelación", "1", "Cliente canceló", "25-05-2025"},
+            {"003", "Amoxicilina 500mg", "Devolución", "3", "Mal empaquetado", "25-05-2025"},
+            {"004", "Omeprazol 20mg", "Cancelación", "1", "Error en ticket", "26-05-2025"}
+        };
+
+        int totalDevoluciones = 0;
+        int totalCancelaciones = 0;
+
+        for (Object[] fila : registros) {
+            for (Object celda : fila) {
+                PdfPCell cell = new PdfPCell(new Phrase(celda.toString(), fuenteNormal));
+                cell.setHorizontalAlignment(Element.ALIGN_CENTER);
+                tabla.addCell(cell);
+            }
+
+            String tipo = fila[2].toString();
+            int cantidad = Integer.parseInt(fila[3].toString());
+            if (tipo.equalsIgnoreCase("Devolución")) totalDevoluciones += cantidad;
+            else if (tipo.equalsIgnoreCase("Cancelación")) totalCancelaciones += cantidad;
+        }
+
+        doc.add(tabla);
+
+        // Totales
+        Paragraph totales = new Paragraph();
+        totales.setAlignment(Element.ALIGN_RIGHT);
+        totales.setFont(fuenteNegrita);
+        totales.add("Total Devoluciones: " + totalDevoluciones + "\n");
+        totales.add("Total Cancelaciones: " + totalCancelaciones + "\n");
+        totales.add("Total Operaciones: " + (totalDevoluciones + totalCancelaciones) + "\n");
+        doc.add(totales);
+
+        doc.add(new Paragraph("\n"));
+
+        // Observaciones
+        doc.add(new Paragraph("Observaciones generales:", fuenteNegrita));
+        doc.add(new Paragraph("________________________________________________________________________"));
+        doc.add(new Paragraph("________________________________________________________________________"));
+        doc.add(new Paragraph("________________________________________________________________________\n\n"));
+
+        // Firma
+        doc.add(new Paragraph("Firma del responsable: ________________________________", fuenteNormal));
+        doc.add(new Paragraph("Nombre: ___________________________________________", fuenteNormal));
+        doc.add(new Paragraph("Cargo: _____________________________________________", fuenteNormal));
+
+        doc.close();
+        archivo.close();
+
+        JOptionPane.showMessageDialog(this, "📄 Reporte de devoluciones y cancelaciones generado correctamente.");
+    } catch (DocumentException | IOException ex) {
+        JOptionPane.showMessageDialog(this, "Error al generar el documento: " + ex.getMessage());
+    } catch (Exception e) {
+        JOptionPane.showMessageDialog(this, "Error inesperado: " + e.getMessage());
+    }
+}
+
+
+}
+
+

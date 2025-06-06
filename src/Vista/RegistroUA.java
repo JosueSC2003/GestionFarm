@@ -3,16 +3,9 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
  */
 package Vista;
-<<<<<<< HEAD
-
-/**
- *
- * @author angel
- */
-=======
+import Conexiones.LoginController;
 import javax.swing.JOptionPane;
 
->>>>>>> fcee56b (Actualizado)
 public class RegistroUA extends javax.swing.JFrame {
 
     /**
@@ -20,6 +13,7 @@ public class RegistroUA extends javax.swing.JFrame {
      */
     public RegistroUA() {
         initComponents();
+        getRootPane().setDefaultButton(btlsesion); // Al presionar Enter, se activa el botón de iniciar sesión
     }
 
     /**
@@ -38,6 +32,8 @@ public class RegistroUA extends javax.swing.JFrame {
         txtcontra = new javax.swing.JPasswordField();
         btlsesion = new javax.swing.JButton();
         txtuser = new javax.swing.JLabel();
+        btnRegistrarme = new javax.swing.JButton();
+        jLabel2 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -63,15 +59,24 @@ public class RegistroUA extends javax.swing.JFrame {
         txtuser.setForeground(new java.awt.Color(51, 255, 255));
         txtuser.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/usuario21.jpg"))); // NOI18N
 
+        btnRegistrarme.setBackground(new java.awt.Color(204, 204, 204));
+        btnRegistrarme.setFont(new java.awt.Font("Arial Black", 0, 14)); // NOI18N
+        btnRegistrarme.setText("Registrarme");
+        btnRegistrarme.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnRegistrarmeActionPerformed(evt);
+            }
+        });
+
+        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/ESOBRAD2.jpg"))); // NOI18N
+        jLabel2.setText("jLabel2");
+
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
         jPanel1Layout.setHorizontalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addGap(116, 116, 116)
-                        .addComponent(btlsesion))
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addGap(24, 24, 24)
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -80,19 +85,27 @@ public class RegistroUA extends javax.swing.JFrame {
                                 .addGroup(javax.swing.GroupLayout.Alignment.LEADING, jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                                     .addComponent(txtusuario, javax.swing.GroupLayout.PREFERRED_SIZE, 326, javax.swing.GroupLayout.PREFERRED_SIZE)
                                     .addComponent(jLabel3, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.PREFERRED_SIZE, 326, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                            .addComponent(lblusuario, javax.swing.GroupLayout.PREFERRED_SIZE, 334, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                            .addComponent(lblusuario, javax.swing.GroupLayout.PREFERRED_SIZE, 334, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addGap(116, 116, 116)
+                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addComponent(btnRegistrarme, javax.swing.GroupLayout.PREFERRED_SIZE, 136, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(btlsesion))))
                 .addContainerGap(24, Short.MAX_VALUE))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
                 .addGap(0, 0, Short.MAX_VALUE)
-                .addComponent(txtuser, javax.swing.GroupLayout.PREFERRED_SIZE, 234, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 250, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(txtuser, javax.swing.GroupLayout.PREFERRED_SIZE, 234, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(68, 68, 68))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel1Layout.createSequentialGroup()
-                .addGap(35, 35, 35)
+                .addComponent(jLabel2)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(txtuser)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 41, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 50, Short.MAX_VALUE)
                 .addComponent(lblusuario)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(txtusuario, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -102,54 +115,55 @@ public class RegistroUA extends javax.swing.JFrame {
                 .addComponent(txtcontra, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(29, 29, 29)
                 .addComponent(btlsesion)
-                .addGap(49, 49, 49))
+                .addGap(26, 26, 26)
+                .addComponent(btnRegistrarme)
+                .addGap(52, 52, 52))
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-<<<<<<< HEAD
-            .addGroup(layout.createSequentialGroup()
-                .addGap(139, 139, 139)
-                .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(256, Short.MAX_VALUE))
+            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addContainerGap(49, Short.MAX_VALUE)
-                .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap())
-=======
-            .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-        );
-        layout.setVerticalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
->>>>>>> fcee56b (Actualizado)
+            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
     private void btlsesionActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btlsesionActionPerformed
-<<<<<<< HEAD
-        // TODO add your handling code here:
-    }//GEN-LAST:event_btlsesionActionPerformed
+    String nombre_usuario = txtusuario.getText();  // Ahora usamos correo en lugar de username
+    String contraseña = new String(txtcontra.getPassword());
 
-=======
-         
+    LoginController loginController = new LoginController();
+
+    if (loginController.validarLogin(nombre_usuario, contraseña)) {  // Si el login es correcto
+        
+        // Abrimos la ventana principal
         Interfaz1 R2 = new Interfaz1();
         R2.setVisible(true);
-        R2.setLocationRelativeTo(null);
-        this.dispose();
-        
+        R2.setLocationRelativeTo(null);  
+        this.dispose();  // Cierra la ventana de login
+    } else {
+        JOptionPane.showMessageDialog(this, "❌ usuario o contraseña incorrectos.");
+      }
     }//GEN-LAST:event_btlsesionActionPerformed
+
+    private void btnRegistrarmeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnRegistrarmeActionPerformed
+                                               
+    RegistroUsuario ventanaRegistro = new RegistroUsuario(); // Abre la ventana de registro
+    ventanaRegistro.setVisible(true);
+    ventanaRegistro.setLocationRelativeTo(null);
+    this.dispose(); // Cierra la ventana de login
+
+
+    }//GEN-LAST:event_btnRegistrarmeActionPerformed
      
     
     
->>>>>>> fcee56b (Actualizado)
     /**
      * @param args the command line arguments
      */
@@ -187,6 +201,8 @@ public class RegistroUA extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btlsesion;
+    private javax.swing.JButton btnRegistrarme;
+    private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JLabel lblusuario;

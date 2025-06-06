@@ -1,0 +1,15 @@
+====== FARMACIA ESO BRAD ======
+         Ticket de Venta        
+--------------------------------
+Cant       Producto        P.Unit     Total     
+5          Paracetamol 500mg 24.00      120.00    
+3          Ibuprofeno 400mg 38.00      114.00    
+8          Gel antibacterial 250ml 28.00      224.00    
+--------------------------------
+Subtotal:     $458.00
+IVA (16%):    $73.28
+Total:        $531.28
+Efectivo:     $600.00
+Cambio:       $68.72
+Gracias por su compra :)
+Fecha: 2025-06-03T15:36:21.146732

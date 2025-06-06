@@ -3,21 +3,19 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-<<<<<<< HEAD
-            <file>file:/C:/Users/josue/Desktop/GestionFarm/.git/config</file>
+            <file>file:/C:/Users/josue/Desktop/GestionFarm/src/Conexiones/Conexion.java</file>
             <file>file:/C:/Users/josue/Desktop/GestionFarm/src/Vista/RegistroUA.java</file>
-            <file>file:/C:/Users/josue/Desktop/GestionFarm/src/Vista/NewJFrame.java</file>
+            <file>file:/C:/Users/josue/Desktop/GestionFarm/src/recibostxt/ticket.txt</file>
+            <file>file:/C:/Users/josue/Desktop/GestionFarm/src/Conexiones/Sesion.java</file>
+            <file>file:/C:/Users/josue/Desktop/GestionFarm/src/Vista/RegistroUsuario.java</file>
+            <file>file:/C:/Users/josue/Desktop/GestionFarm/src/Vista/Inventario.java</file>
+            <file>file:/C:/Users/josue/Desktop/GestionFarm/src/Vista/Soporte.java</file>
+            <file>file:/C:/Users/josue/Desktop/GestionFarm/src/Conexiones/LoginController.java</file>
+            <file>file:/C:/Users/josue/Desktop/GestionFarm/src/Vista/Usuarios2.java</file>
+            <file>file:/C:/Users/josue/Desktop/GestionFarm/src/Conexiones/ReporteDAO.java</file>
+            <file>file:/C:/Users/josue/Desktop/GestionFarm/src/Vista/Informes.java</file>
+            <file>file:/C:/Users/josue/Desktop/GestionFarm/src/Vista/Caja3.java</file>
             <file>file:/C:/Users/josue/Desktop/GestionFarm/src/Vista/Interfaz1.java</file>
-            <file>file:/C:/Users/josue/Desktop/GestionFarm/src/Vista/Soporte.java</file>
-            <file>file:/C:/Users/josue/Desktop/GestionFarm/src/Vista/Caja.java</file>
-=======
-            <file>file:/C:/Users/josue/Desktop/GestionFarm/src/dao/SoporteDAO.java</file>
-            <file>file:/C:/Users/josue/Desktop/GestionFarm/src/test/TestReporteDAO.java</file>
-            <file>file:/C:/Users/josue/Desktop/GestionFarm/src/dao/ReporteDAO.java</file>
-            <file>file:/C:/Users/josue/Desktop/GestionFarm/src/util/CorreoUtil.java</file>
-            <file>file:/C:/Users/josue/Desktop/GestionFarm/src/Vista/Soporte.java</file>
-            <file>file:/C:/Users/josue/Desktop/GestionFarm/src/Conexion/Conexion.java</file>
->>>>>>> fcee56b (Actualizado)
         </group>
     </open-files>
 </project-private>
